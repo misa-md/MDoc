@@ -17,7 +17,7 @@ local:$ wget https://www.ctcms.nist.gov/potentials/Download/Fe-Cu-Ni-GB/FeCuNi.e
 ### 1.3 上传文件
 ```bash
 local:$ cd ../
-local:$ tar CrystalMD-v3.0.0.tar.gz $MD_PATH # 打包源代码文件
+local:$ tar zcvf CrystalMD-v3.0.0.tar.gz $MD_PATH # 打包源代码文件
 local:$ scp CrystalMD-v3.0.0.tar.gz  username@explane.sccas.cn:~/Era_md_path # scp 上传至 '元', username和Era_md_path 请替换成自己的路径
 local:$ 
 ```
@@ -31,7 +31,7 @@ local:$ ssh username@explane.sccas.cn # 登录
 era:$ cd Era_md_path
 era:$ ls
 CrystalMD-v3.0.0.tar.gz #之前上传的源码及其依赖文件
-era:$ tar zxcf CrystalMD-v3.0.0.tar.gz # 解压
+era:$ tar zxvf CrystalMD-v3.0.0.tar.gz # 解压
 era:$ ls
 CrystalMD CrystalMD-v3.0.0.tar.gz
 ```
