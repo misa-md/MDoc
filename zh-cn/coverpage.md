@@ -6,5 +6,5 @@
 * Parallel for HPC.
 * Easy config.
 
-[GitHub](https://git.gensh.me/HPCer/CrystalMD/CrystalMD)
+[Git Repository](https://git.gensh.me/HPCer/CrystalMD/CrystalMD)
 [Get Started](#crystal-md)

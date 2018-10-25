@@ -2,5 +2,4 @@
 
 English version document is not available currently.
 
-Please go to chinese version.
- <!-- [Chinese](#/zh-cn/) -->
+Please checkout to <a href="#/zh-cn/"> chinese</a> version.
