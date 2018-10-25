@@ -15,6 +15,8 @@
     * [超算"元"上编译运行](zh-cn/03-02-run_on_Era.md)
 
 * **配置项**
+    * [配置文件](zh-cn/04-01-configure)
+    * [配置项说明](zh-cn/04-02-configure_terms)
 
 * **Tools**
     * [conv tool](zh-cn/conv_tool)
