@@ -6,10 +6,13 @@
 * **编译与运行**
     * [准备环境](zh-cn/02-01-prepare_environment)
     * [获取源代码](zh-cn/02-02-get_source_code)
-    * [编译运行Crystal MD]()
+    * [编译Crystal MD](zh-cn/02-03-compile)
+    * [准备势函数文件](zh-cn/02-04-potential_file)
+    * [运行Crystal MD](zh-cn/02-05-run_md)
 
 * **在超算上运行**
-    * [超算"元"上编译运行](zh-cn/run_on_Era)
+    * [超算"神威·太湖之光"上编译运行](zh-cn/03-02-run_on_sunway.md)
+    * [超算"元"上编译运行](zh-cn/03-02-run_on_Era.md)
 
 * **配置项**
 

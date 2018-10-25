@@ -15,6 +15,26 @@
   </nav>
   <div id="app">Please wait...</div>
   <script>
+    var gitRepo = "https://git.gensh.me/genshen/MDoc"
+    var maintainedBy = "https://https://git.gensh.me/HPCer"
+    var plugins = [
+      function(hook, vm) {
+        var footer = [
+          '<hr/>',
+          '<footer>',
+          '<span>Maintained by <a href="'+ maintainedBy +'" target="_blank"> High Performance Computing Research Group</a>, USTB. &copy;2018.</span><br>',
+          '<span>Published by <a href="https://about.gitlab.com/features/pages/" target="_blank">Gitlab pages</a>.&emsp;</span>',
+          '<span>Powered by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span><br>',
+          '</footer>'
+        ].join('')
+        hook.beforeEach(function (html) {
+          var url = gitRepo + "/blob/master/" + vm.route.file
+          var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+          return editHtml + html + footer
+        })
+      }
+    ]
+
     window.$docsify = {
       search: 'auto', // 默认值
       // basePath: '/MDoc/',
@@ -25,6 +45,7 @@
       },
       loadSidebar: true,
       subMaxLevel: 2,
+      plugins: plugins,
       // repo: 'https://git.gensh.me/HPCer/CrystalMD/CrystalMD'
     }
   </script>
@@ -34,10 +55,12 @@
   <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-diff.min.js"></script>
+  <script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
   <script>
       if (typeof navigator.serviceWorker !== 'undefined') {
         navigator.serviceWorker.register('sw.js')
       }
+      EditOnGithubPlugin.create("https://github.com/genshen/", null, "edit on git")
   </script>
 </body>
 </html>
