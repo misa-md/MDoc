@@ -4,6 +4,8 @@ CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需�
 
 > conv工具目前支持windows, linux系统；linux版本中包含i386，amd64， arm, mpis等主流架构版本，windows包含主流的i386和amd64版本。
 
+!> __TODO__ 编译
+
 ## 1. 基本命令
 ### 1.1 conv --help命令
 查看帮助信息。
