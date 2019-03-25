@@ -45,11 +45,14 @@ timesteps_length = 0.001
 
 [output]
 atoms_dump_mode = "copy"
-atoms_dump_file_path = "crystal_md.out"
+by_frame=true
+atoms_dump_file_path = "crystal_mdl.{}.out"
+origin_dump_path = "crystal_mdl.origin.out"
 atoms_dump_interval = 10
     [output.logs]
-    logs_mode = "file"
+    logs_mode = "console"
     logs_filename = ""
+
 ```
 
 ## 2.使用配置文件
