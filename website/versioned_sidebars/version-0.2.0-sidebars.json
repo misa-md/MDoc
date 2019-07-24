@@ -1,0 +1,24 @@
+{
+  "version-0.2.0-docs": {
+    "概览": [
+      "version-0.2.0-overview",
+      "version-0.2.0-publications"
+    ],
+    "快速入门": [
+      "version-0.2.0-getting-started"
+    ],
+    "编译 Crystal MD": [
+      "version-0.2.0-prepare-environment",
+      "version-0.2.0-get-source-code",
+      "version-0.2.0-compiling"
+    ],
+    "运行 MD": [
+      "version-0.2.0-potential-file",
+      "version-0.2.0-run-md"
+    ],
+    "配置": [
+      "version-0.2.0-configure",
+      "version-0.2.0-configure-terms"
+    ]
+  }
+}
