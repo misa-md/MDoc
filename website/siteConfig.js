@@ -20,7 +20,7 @@ const users = [
   },
 ];
 
-const siteBaseUrl = process.env.NODE_ENV === 'production'? '/clusters/' : '/'
+const siteBaseUrl = process.env.NODE_ENV === 'production'? '/CrystalMD/MDoc/' : '/'
 
 const siteConfig = {
   title: 'Crystal MD', // Title for your website.
