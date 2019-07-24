@@ -11,31 +11,53 @@ Crystal MD从 v0.2.0开始，使用toml作为配置文件的格式，关于toml�
 以下展示了Crystal MD配置文件的部分示例：
 ```toml
 title = "Crystal-MD Configure File"
+version = "0.3.0"
 #<a href='https://github.com/toml-lang/toml'>toml</a> configure file for Crystal-MD application,
 #designed by <a href='mailto:genshenchu@gmail.com'>genshen</a>"
 
 #for BCC struct
 [simulation]
 phasespace = [50, 50, 50]
-cutoff_radius = 5.60
+cutoff_radius_factor = 1.96125
 lattice_const = 2.85532
 timesteps =  10
+timesteps_length = 0.001
 
-[simulation.createphase]
-#createphase = [600, 466953]
-create_phase = true
-create_t_set = 600.0
-create_seed = 466953
+    [simulation.createphase]
+    #createphase = [600, 466953]
+    create_phase = true
+    create_t_set = 600.0
+    create_seed = 466953
+    #read_phase_filename = ""
 
-[simulation.collision]
-collision_steps = 2
-lat = [2, 2, 2, 0]
-collision_v = [5.0, 5.0, 5.0]
+    # types of alloy
+    [simulation.alloy]
+        create_seed = 1024
+        [simulation.alloy.ratio]
+            Fe = 97
+            Cu = 2
+            Ni = 1
 
-# potential file config
-[simulation.potential_file]
-type = "setfl"
-filename = "FeCuNi.eam.alloy"
+    [simulation.collision]
+    collision_step = 2
+    lat = [2, 2, 2, 0]
+    collision_v = [5.0, 5.0, 5.0]
+
+    # potential file config
+    [simulation.potential_file]
+    type = "setfl"
+    filename = "FeCuNi.eam.alloy"
+
+[output]
+atoms_dump_mode = "copy"
+atoms_dump_file_path = "crystal_mdl.{}.out"
+origin_dump_path = "crystal_mdl.origin.out"
+atoms_dump_interval = 10
+by_frame=true
+    [output.logs]
+    logs_mode = "console"
+    logs_filename = ""
+
 ```
 
 ## 2.使用配置文件

@@ -31,56 +31,11 @@ make install
 |  参数 | 取值 | 默认值  |  说明 |
 | :-   | :-:  | :-:	| :-   |
 | TEST_ENABLE_FLAG       | ON/OFF	| ON | 是否构建test (单元测试) |
+| TOOLS_BUILD_ENABLE_FLAG|  ON/OFF	| ON |  是否构建tools目录(包含一些数据后处理工具)	|
 
 例如，如果你不希望构建单元测试和tools目录，可以使用如下的命令进行构建：
 ```bash
 cd $MD_PATH
-cmake -B./build -H./ -DTEST_ENABLE_FLAG=OFF
+cmake -B./build -H./ -DTEST_ENABLE_FLAG=OFF -DTOOLS_BUILD_ENABLE_FLAG=OFF
 cmake --build ./build -j 4
-```
-
-## v0.2.0 版本已知的编译问题
-1.  no matching function for call to 'toml:: Value::as<long int>() const'
-
-```long
-config.cpp: In member function 'void config::resolveConfig(std::__cxx11::string)':
-CrystalMD-v0.2.0/src/config.cpp:94:45: error: no matching function for call to 'toml::Value::as<long int>() const'
-         timeSteps = tomlTimeSteps->as<long>();
-                                             ^
-In file included from CrystalMD-v0.2.0/src/config.cpp:4:
-CrystalMD-v0.2.0/src/include/toml.hpp:1406:49: note: candidate: 'template<class T> typename toml::call_traits<T>::return_type toml::Value::as() const'
-     inline typename call_traits<T>::return_type Value::as() const {
-```
-
-编辑 `$MD_PATH/src/config.cpp`文件:
-```diff
--    if (tomlTimeSteps && tomlTimeSteps->is<long>()) {
--        timeSteps = tomlTimeSteps->as<long>();
-+    if (tomlTimeSteps && tomlTimeSteps->is<int>()) {
-+        timeSteps = tomlTimeSteps->as<int>();
-    }
-    ...
--    if (tomlCollisionSteps && tomlCollisionSteps->is<long>()) {
--        collisionSteps = tomlCollisionSteps->as<long>();
-+    if (tomlCollisionSteps && tomlCollisionSteps->is<int>()) {
-+        collisionSteps = tomlCollisionSteps->as<int>();
-    }
-
-```
-
-2. No rule to make target `src/CMakeFiles/CrystalMD.dir/depend'.
-
-```log
-[ 88%] Linking CXX static library ../lib/libcrystalmd.a
-[ 88%] Built target crystalmd
-make[2]: *** No rule to make target `src/CMakeFiles/CrystalMD.dir/depend'.  Stop.
-make[1]: *** [src/CMakeFiles/CrystalMD.dir/all] Error 2
-make: *** [all] Error 2
-```
-
-编辑 `src/CMakeLists.txt` 文件:
-```diff
-# make crystal-md lib
--set(MD_LIB_NAME crystalmd)
-+set(MD_LIB_NAME md)
 ```

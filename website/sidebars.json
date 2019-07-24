@@ -16,9 +16,15 @@
       "potential-file",
       "run-md"
     ],
+    "在超算上编译与运行": [
+      "building-and-running-on-era"
+    ],
     "配置": [
       "configure",
       "configure-terms"
+    ],
+    "工具": [
+      "md-tools"
     ]
   },
   "docs-other": {
