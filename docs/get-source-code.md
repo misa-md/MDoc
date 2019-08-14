@@ -35,7 +35,7 @@ $ git checkout Branch_Or_Tag
 如，下载v0.3.0版本的源码包：
 ```bash
 $ wget -O Crystal MD-v0.2.0.tat.gz \
-  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/repository/v0.3.0/archive.tar.gz
+  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/-/archive/v0.3.0/CrystalMD-v0.3.0.tar.gz
 $ tar -zxvf Crystal MD-v0.3.0.tar.gz
 ```
 
