@@ -1,0 +1,53 @@
+\documentclass{report}
+\usepackage[fencedCode, definitionLists]{markdown}
+\usepackage[UTF8, heading = true]{ctex}
+
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{cleveref}
+
+\usepackage{minted}
+\usepackage{xcolor}
+\setminted{linenos,
+    numbersep=5pt,
+    % gobble=2,
+    frame=lines,
+    framesep=2mm}
+
+\begin{document}
+\input{cover}
+
+\pagenumbering{Roman}
+\tableofcontents
+
+% \mainmatter % automatic page break
+\pagenumbering{arabic}
+
+
+\chapter{概览}
+\markdownInput{../docs/overview.md}
+\markdownInput{../docs/publications.md}
+
+\chapter{快速入门}
+\markdownInput{../docs/quickstart.md}
+
+\chapter{编译 Crystal MD}
+\markdownInput{../docs/prepare-environment.md}
+\markdownInput{../docs/get-source-code.md}
+\markdownInput{../docs/compiling.md}
+
+\chapter{运行 MD}
+\markdownInput{../docs/potential-file.md}
+\markdownInput{../docs/run-md.md}
+
+\chapter{在超算上编译与运行}
+\markdownInput{../docs/run-on-Era.md}
+
+\chapter{配置}
+\markdownInput{../docs/configure.md}
+\markdownInput{../docs/configure-terms.md}
+
+\chapter{工具}
+\markdownInput{../docs/md-tools.md}
+
+\end{document}
