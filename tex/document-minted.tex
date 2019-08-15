@@ -1,0 +1,35 @@
+\documentclass{report}
+\usepackage[UTF8, heading = true]{ctex}
+\usepackage{amssymb,amsmath}
+
+\usepackage{hyperref}
+% \usepackage{nameref}
+\usepackage{cleveref}
+
+% pandoc
+\usepackage{longtable,booktabs}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% end pandoc
+
+\usepackage{xcolor}
+\usepackage{minted}
+\setminted{linenos,
+    numbersep=5pt,
+    % gobble=2,
+    breakanywhere,
+    breaklines,
+    frame=lines,
+    framesep=2mm}
+
+\begin{document}
+\input{cover}
+
+\pagenumbering{Roman}
+\tableofcontents
+
+% \mainmatter % automatic page break
+\pagenumbering{arabic}
+\input{contents}
+\end{document}
