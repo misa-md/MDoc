@@ -8,7 +8,7 @@ with_minted="OFF"
 if [ "$1" != "" ]; then
     dir=$1
 fi
-if [ "$2" == "--minted" ]; then
+if [ "$2" = "--minted" ]; then
     echo "minted highlighing is enabled."
     with_minted="ON"
 fi
@@ -25,7 +25,7 @@ do
     do
         md_full_filename=$(basename $md_file)
         filename="${md_full_filename%.*}"
-        if [ "$with_minted" == "OFF" ];  then
+        if [ "$with_minted" = "OFF" ];  then
             pandoc $md_file -o _markdown_docs/$(basename $filename.tex) --listings
         else
             pandoc --filter pandoc-minted $md_file -o _markdown_docs/$(basename $filename.tex)

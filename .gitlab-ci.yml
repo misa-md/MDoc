@@ -2,16 +2,18 @@ image: alpine:latest
 
 variables:
   SITE_BUILD_DIR: "website/build/MDoc"
+  PDF_FILE_PATH: "tex/document.pdf"
 
 stages:
-  - build
+  - build-website
+  - build-pdf
   - deploy
 
 ## all branchs can build html
-build:
+build-website:
   image: node:10.14.1-alpine
   tags: [pages]
-  stage: build
+  stage: build-website
   before_script:
     - cd website
     - yarn install --ignore-scripts --registry https://registry.npm.taobao.org 
@@ -27,11 +29,30 @@ build:
     paths:
     - website/build
 
+build-pdf:
+  image: genshen/latex:latest
+  tags: [tex]
+  stage: build-pdf
+  before_script:
+    - cd tex
+    - ./preprocess.sh ../docs
+    - cd ../
+  script:
+    - cd tex
+    - latexmk -xelatex document.tex
+  artifacts:
+    paths:
+    - tex/document.pdf
+
 pages:
   tags: [pages]
   stage: deploy
   script:
   - mv $SITE_BUILD_DIR public
+  - mv $PDF_FILE_PATH public/document.pdf
+  dependencies:
+    - build-website
+    - build-pdf
   artifacts:
     paths:
     - public
