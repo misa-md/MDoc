@@ -74,7 +74,7 @@ function Versions(props) {
               </tr>
             </tbody>
           </table>
-          <p>You alos can <a href={`${siteConfig.baseUrl}document.pdf`}>download pdf</a> file of msater version.</p>
+          <p>You can also <a href={`${siteConfig.baseUrl}document.pdf`}>download pdf</a> file of msater version.</p>
           <h3 id="archive">Past Versions</h3>
           <p>Here you can find previous versions of the documentation.</p>
           <table className="versions">
