@@ -15,8 +15,8 @@ CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需�
 查看帮助信息。
 ```bash
 $ md-tools --help
-md-conv 0.3.1
-Crystal MD conversion tools.
+md-tools 0.1.0
+Crystal MD conversion tools, compatible with Crystal MD v0.3.x.
 
 USAGE:
     md-tools [OPTIONS] --format <FORMAT> --input <input> --ranks <RANKS>
@@ -28,11 +28,11 @@ FLAGS:
 OPTIONS:
     -f, --format <FORMAT>    output format(xyz, text, db, def)
     -i, --input <input>      Sets the filename of input file
-    -o, --output <output>    Sets the filename of output file [default: input txt]
+    -o, --output <output>    Sets the filename of output file [default: md-output]
     -r, --ranks <RANKS>      ranks to run the parallel program
 ```
 
-更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools。
+更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/crystal-md/md-tools。
 
 ### 1.2 转换模拟结果文件到文本文件
 命令示例：
