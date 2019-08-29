@@ -42,7 +42,7 @@ $ tar -zxvf Crystal MD-v0.3.0.tar.gz
 ## 3.安装依赖
 获取的源码中不包含该程序的依赖包，所以还需要额外的工作来安装依赖。
 
-Crystal MD 依赖于一些开源库, 如[kiwi](https://git.gensh.me/genshen/kiwi),
+Crystal MD 依赖于一些开源库, 如[kiwi](https://git.hpcer.dev/genshen/kiwi),
 googletest, fmt, [args]({https://github.com/Taywee/args/)等。
 可以使用[pkg](https://github.com/genshen/pkg/)依赖管理工具下载依赖包或者直接将对应依赖包导入到Crystal MD源码`vendor`目录。
 
@@ -75,7 +75,7 @@ pkg import vendor-20190725-003851.426644.tar
 
 假设依赖压缩包文件名为：vendor-20190725-003851.426644.tar, 可以通过以下命令加入依赖包:
 ```bash
-mkdir /tmp/md_vendor_temp
-tar xvf path/of/vendor-20190725-003851.426644.tar # tar to vendor-20190725-003958.325777 direcooty.
-mv vendor-20190725-003958.325777 vendor
+mkdir -p $MD_PATH/vendor
+cd $MD_PATH/vendor
+tar xvf path/of/vendor-20190725-003851.426644.tar # tar to direcooty.
 ```

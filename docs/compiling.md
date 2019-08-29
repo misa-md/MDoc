@@ -23,7 +23,7 @@ cmake --build ./build -j 4  # build using 4 processors.
 cd $MD_PATH
 cmake -B./build -H./ -DCMAKE_INSTALL_PREFIX=/your/desirable/path/
 cmake --build ./build -j 4
-make install
+cmake --build ./build --target install # install
 ```
 
 在执行cmake命令的时候，除了可以指定`CMAKE_INSTALL_PREFIX`等CMake构建工具内置的参数外，还可以指定以下参数：
@@ -31,9 +31,8 @@ make install
 |  参数 | 取值 | 默认值  |  说明 |
 | :-   | :-:  | :-:	| :-   |
 | TEST_ENABLE_FLAG       | ON/OFF	| ON | 是否构建test (单元测试) |
-| TOOLS_BUILD_ENABLE_FLAG|  ON/OFF	| ON |  是否构建tools目录(包含一些数据后处理工具)	|
 
-例如，如果你不希望构建单元测试和tools目录，可以使用如下的命令进行构建：
+例如，如果你不希望构建单元测试tests目录，可以使用如下的命令进行构建：
 ```bash
 cd $MD_PATH
 cmake -B./build -H./ -DTEST_ENABLE_FLAG=OFF -DTOOLS_BUILD_ENABLE_FLAG=OFF
