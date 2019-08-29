@@ -78,16 +78,20 @@ sidebar_label: 配置项说明
 类型：Integer 数组，长度: 4;  
 说明：级联碰撞PKA原子位置，数组第4项为偏移值，一般设为0;  
 
-## simulation.collision.collision_v
-类型：Float 数组，长度: 3;    
-说明：用于设置级联碰撞PKA原子速度，数组值分别表示x、y、z三个维度的速度，直接叠加到对应原子的速度上;  
+## simulation.collision.pka
+类型：Float 
+说明：用于设置级联碰撞PKA原子能量，单位eV，直接叠加到对应原子的速度上; 
+
+## simulation.collision.direction
+类型：Integer 数组，长度: 3;  
+说明：用于设置PKA能量对应的速度在三个维度(x,y,z)的分量，或者说是PKA入射方向; 
 
 ## simulation.potential_file
 说明：势函数文件相关参数;  
 
 ## simulation.potential_file.type
 类型：String  
-说明：势函数文件格式, 取值"setfl"或者"funcfl";  
+说明：势函数文件格式, 取值"setfl"或者"funcfl"，目前仅支持 setfl 格式;  
 
 ## simulation.potential_file.filename
 类型：String  
@@ -101,7 +105,7 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 ## output.atoms_dump_file_path
 类型：String  
 说明：copy模式下，输出二进制文件路径;
-如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个打括号(如`crystal_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
+如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个大括号(如`crystal_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
 
 ## output.origin_dump_path
 类型：String  

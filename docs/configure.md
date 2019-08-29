@@ -24,7 +24,6 @@ timesteps =  10
 timesteps_length = 0.001
 
     [simulation.createphase]
-    #createphase = [600, 466953]
     create_phase = true
     create_t_set = 600.0
     create_seed = 466953
@@ -41,7 +40,8 @@ timesteps_length = 0.001
     [simulation.collision]
     collision_step = 2
     lat = [2, 2, 2, 0]
-    collision_v = [5.0, 5.0, 5.0]
+    pka = 6.8
+    direction = [1.0, 1.0, 1.0]
 
     # potential file config
     [simulation.potential_file]
