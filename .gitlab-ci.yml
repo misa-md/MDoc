@@ -22,9 +22,9 @@ build-website:
     - cd website
     - yarn build
   cache:
-    key: docusaurus-1.12.0 # caching by docusaurus version.
+    key: docusaurus-1.13.0 # caching by docusaurus version.
     paths:
-    - website/node_modules/
+    - website/node_modules
   artifacts:
     paths:
     - website/build
