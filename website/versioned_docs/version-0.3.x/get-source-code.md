@@ -69,7 +69,7 @@ pkg install
 假设依赖压缩包文件名为: vendor-20190725-003851.426644.tar, 可以通过以下pkg命令导入依赖包:
 ```bash
 cd $MD_PATH
-pkg import vendor-20190725-003851.426644.tar
+pkg import --input vendor-20190725-003851.426644.tar
 ```
 
 ### 2.3 直接解压依赖包
