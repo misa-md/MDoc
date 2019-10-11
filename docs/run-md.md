@@ -10,13 +10,13 @@ sidebar_label: 运行 Crystal MD
 
 ## 1.运行
 你可以使用 `mpirun` 命令运行并行的Crystal MD分子动力学软件。
-例如，下面的示例中，使用4个MPI进程运行Crystal MD，并指定配置文件路径为和example同一目录下的`config.toml`文件。
+例如，下面的示例中，使用4个MPI进程运行Crystal MD，并指定配置文件路径为和example同一目录下的`config.yaml`文件。
 
 ?> 关于配置文件的相关说明请参考**配置项**等相关章节。
 
 ```bash
 cd $MD_PATH/example
-mpirun -n 4 ../build/bin/Crystal MD -c config.toml
+mpirun -n 4 ../build/bin/Crystal MD -c config.yaml
 ```
 
 更多信息可以通过执行`$MD_PATH/build/bin/Crystal MD --help`命令查看。

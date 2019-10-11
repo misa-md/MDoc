@@ -4,128 +4,163 @@ title: 配置项说明
 sidebar_label: 配置项说明
 ---
 
-配置文件的示例见`$MD_PATH/example/config.toml`, 其中配置文件的各个字段如下，你可以根据你的需求修改各选项的值。
+配置文件的示例见`$MD_PATH/example/config.yaml`, 其中配置文件的各个字段如下，你可以根据你的需求修改各选项的值。
 
-## simulation.phasespace
+## 基本配置
+基本配置指定模拟的基本信息，如空间信息(晶格点数、截断半径等)，体系创建等配置。
+
+### simulation
+说明：指定模拟的基本信息，如box大小、截断半径等;
+
+### simulation.phasespace
 类型: Integer 数组, 长度: 3;  
 说明：模拟盒子大小，分别为x、y、z三个维度上的尺寸；单位为晶格常数;
 
-## simulation.lattice_const
+### simulation.lattice_const
 类型: Float;  
 单位: 埃, Å;  
 说明: 晶格常数;
 
-## simulation.cutoff_radius_factor
+### simulation.cutoff_radius_factor
 类型: Float;  
 说明: 截断半径系数; 截断半径系数乘以晶格常数等于实际的截断半径长度;
 
-## simulation.timesteps
-类型：Integer;   
-说明：模拟时间步数;  
-
-## simulation.timesteps_length
+### simulation.def_timesteps_length
 类型：Float;  
 单位：皮秒, ps;  
-说明：模拟中每一个时间步长度;  
+说明：模拟中默认的每一个时间步长度;  
 
-## simulation.createphase
-说明：模拟中创建原子的相关参数;  
+### creation
+说明：指定模拟初始化时创建模拟体系的相关参数;
 
-## simulation.createphase.create_phase
+### creation.create_phase
 类型：Boolean;  
 说明：true表示程序初始化时，按照给定参数(如温度)随机创建原子；false表示读入已有的原子信息以创建原子;  
 
-## simulation.createphase.create_t_set
-类型：Float;  
-单位：开, K;  
-说明：初始化原子信息时的系统温度;  
- <!--仅 simulation.createphase.create_phase 为 true 时有效 -->
-
-## simulation.createphase.create_seed
+### creation.create_seed
 类型：Integer;  
-说明：创建原子信息的随机数种子；仅 simulation.createphase.create_phase 为 true 时有效;  
+说明：创建原子信息的随机数种子；仅 `creation.create_phase` 为 true 时有效;  
 
-## simulation.alloy
-说明：合金元素的相关配置; 该部分仅simulation.createphase.create_phase 为 true 时有效;  
+### creation.alloy
+说明：合金元素的相关配置; 该部分仅 `creation.create_phase` 为 true 时有效;  
 
-## simulation.alloy.create_seed
+### creation.alloy.create_seed
 类型：Integer;  
 说明：创建原子时，随机生成不同种类合金原子的随机数种子;  
 
-## simulation.alloy.ratio
+### creation.alloy.ratio
 说明：创建原子时，指定随机生成的各类合金原子比例，例如各类合金的比例Fe:Cu:Ni = 97:2:1;
 
-## simulation.alloy.ratio.Fe
+### creation.alloy.ratio.Fe
 类型：Integer;  
 说明：创建合金时，合金中Fe元素的比例;  
 
-## simulation.alloy.ratio.Cu
+### creation.alloy.ratio.Cu
 类型：Integer;  
 说明：创建合金时，合金中Cu元素的比例;  
 
-## simulation.alloy.ratio.Ni
+### creation.alloy.ratio.Ni
 类型：Integer;  
 说明：创建合金时，合金中Ni元素的比例;  
 
-## simulation.collision
-说明：级联碰撞的相关参数;  
-
-## simulation.collision.collision_step
-类型：Integer;  
-说明：指定级联碰撞开始的时间步;  
-
-## simulation.collision.lat
-类型：Integer 数组，长度: 4;  
-说明：级联碰撞PKA原子位置，数组第4项为偏移值，一般设为0;  
-
-## simulation.collision.pka
-类型：Float 
-说明：用于设置级联碰撞PKA原子能量，单位eV，直接叠加到对应原子的速度上; 
-
-## simulation.collision.direction
-类型：Integer 数组，长度: 3;  
-说明：用于设置PKA能量对应的速度在三个维度(x,y,z)的分量，或者说是PKA入射方向; 
-
-## simulation.potential_file
+### potential
 说明：势函数文件相关参数;  
 
-## simulation.potential_file.type
+### potential.type
 类型：String  
 说明：势函数文件格式, 取值"setfl"或者"funcfl"，目前仅支持 setfl 格式;  
 
-## simulation.potential_file.filename
+### potential.file_path
 类型：String  
 说明：势函数文件路径;  
 
-## output.atoms_dump_mode
+### output
+说明：输出相关配置;
+
+### output.dump.atoms_dump_mode
 类型：String  
 说明：输出模式，取值为"copy"或者"direct"；copy模式输出一个文件，二进制格式;  
 direct模式输出多个文本文件(每个进程与每一个需要输出的时间步都对应一个文件)，一般用于程序调试;
 
-## output.atoms_dump_file_path
+### output.dump.atoms_dump_file_path
 类型：String  
 说明：copy模式下，输出二进制文件路径;
 如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个大括号(如`crystal_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
 
-## output.origin_dump_path
+### output.dump.origin_dump_path
 类型：String  
 说明：copy模式下，输出级联碰撞前一个时间步的体系粒子，该选项指定输出的文件路径; 若该项为空，则不输出;
 
-## output.atoms_dump_interval
+### output.dump.atoms_dump_interval
 类型：Integer  
 说明：指定每隔一定时间步，输出一次系统中的所有原子信息;  
 
-## output.by_frame
+### output.dump.by_frame
 类型: Boolean  
 说明: 每隔`output.atoms_dump_interval`项指定到时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
 
-## output.output.logs
-程序日志:可以选择输出到stdio或者文件.
+### output.thermo
+说明：热力学信息的输出相关配置;
 
-## output.output.logs_mode
-类型: String
-说明: 日志输出模式,可以为`console`(输出到stdio)或者`file`(输出到文件).
+### output.thermo.interval
+类型：Integer  
+说明：指定每隔一定时间步输出系统的热力学信息，包括体系温度、能量等; 
 
-## output.output.logs_filename
-类型: String
-说明: 如果日志输出模式为file, 改选项指定文件路径.
+### output.logs
+说明：程序日志, 可以选择输出到标准输出或者文件.
+
+### output.logs.logs_mode
+类型：String  
+说明：日志输出模式,可以为`console`(输出到标准输出)或者`file`(输出到文件).
+
+### output.logs.logs_filename
+类型：String  
+说明：如果日志输出模式为file, 改选项指定文件路径.
+
+## STAGES
+stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci 和 github action。每个 stage 中依据该stage的配置参数执行若干时间步。  
+目前 stage 中可以配置时间步、时间步长等参数以及rescale、PKA级联碰撞等操作。
+
+### [stage].name
+类型：String  
+说明：stage 名称;
+
+### [stage].steps
+类型：Integer  
+说明：该 stage 执行的模拟时间步数;
+
+### [stage].step_length
+类型：Integer  
+单位：皮秒, ps;  
+说明：该 stage 执行的模拟所使用的时间步长，如步指定则使用默认时间步长(由`simulation.def_timesteps_length`指定);
+
+### [stage].rescale
+说明：每隔一定时间步进行一次rescale，将体系温度重新设置为给定的温度; 该选项指定rescale 的相关参数;  
+
+### [stage].rescale.t
+类型：Float;
+单位：开, K;
+说明：每次rescale时，重新设置的体系温度;
+
+### [stage].rescale.every_steps
+类型：Integer  
+说明：执行 rescale 操作的时间步间隔; 
+
+### [stage].setv
+说明：级联碰撞的相关参数;  
+
+### [stage].setv.collision_step
+类型：Integer;  
+说明：指定级联碰撞开始的时间步，该时间步时相对于该stage的，而非全局时间步;  
+
+### [stage].setv.lat
+类型：Integer 数组，长度: 4;  
+说明：级联碰撞PKA原子位置，数组第4项为偏移值，一般设为0;  
+
+### [stage].setv.energy
+类型：Float 
+说明：用于设置级联碰撞PKA原子能量，单位eV，直接叠加到对应原子的速度上; 
+
+### [stage].setv.direction
+类型：Integer 数组，长度: 3;  
+说明：用于设置PKA能量对应的速度在三个维度(x,y,z)的分量，或者说是PKA入射方向; 
