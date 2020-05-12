@@ -130,7 +130,7 @@ stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci �
 说明：该 stage 执行的模拟时间步数;
 
 ### [stage].step_length
-类型：Integer  
+类型：Float  
 单位：皮秒, ps;  
 说明：该 stage 执行的模拟所使用的时间步长，如步指定则使用默认时间步长(由`simulation.def_timesteps_length`指定);
 
@@ -138,8 +138,8 @@ stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci �
 说明：每隔一定时间步进行一次rescale，将体系温度重新设置为给定的温度; 该选项指定rescale 的相关参数;  
 
 ### [stage].rescale.t
-类型：Float;
-单位：开, K;
+类型：Float;  
+单位：开, K;  
 说明：每次rescale时，重新设置的体系温度;
 
 ### [stage].rescale.every_steps
@@ -158,7 +158,7 @@ stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci �
 说明：级联碰撞PKA原子位置，数组第4项为偏移值，一般设为0;  
 
 ### [stage].setv.energy
-类型：Float 
+类型：Float  
 说明：用于设置级联碰撞PKA原子能量，单位eV，直接叠加到对应原子的速度上; 
 
 ### [stage].setv.direction

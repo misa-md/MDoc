@@ -11,7 +11,7 @@ Crystal MD 从 v0.4.0 开始，使用 [yaml](https://yaml.org) 格式开始作�
 以下展示了Crystal MD配置文件的部分示例：
 ```yaml
 # <a href='https://yaml.org'>yaml</a> configure file for Crystal-MD application,
-# designed by <a href='mailto:genshenchu@gmail.com'>genshen</a>"
+# writen by <a href='mailto:genshenchu@gmail.com'>genshen</a>"
 
 title: "Crystal-MD Configure File"
 version: "0.4.0"
@@ -34,6 +34,7 @@ potential:
 creation:
   create_phase: true
   create_seed: 466953
+  create_t_set: 600
   alloy:
     create_seed: 1024
     ratio:
