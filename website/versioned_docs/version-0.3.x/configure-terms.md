@@ -80,7 +80,7 @@ original_id: configure-terms
 说明：级联碰撞PKA原子位置，数组第4项为偏移值，一般设为0;  
 
 ## simulation.collision.pka
-类型：Float 
+类型：Float  
 说明：用于设置级联碰撞PKA原子能量，单位eV，直接叠加到对应原子的速度上; 
 
 ## simulation.collision.direction
@@ -120,13 +120,13 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 类型: Boolean  
 说明: 每隔`output.atoms_dump_interval`项指定到时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
 
-## output.output.logs
+## output.logs
 程序日志:可以选择输出到stdio或者文件.
 
-## output.output.logs_mode
-类型: String
+## output.logs.logs_mode
+类型: String  
 说明: 日志输出模式,可以为`console`(输出到stdio)或者`file`(输出到文件).
 
-## output.output.logs_filename
-类型: String
+## output.logs.logs_filename
+类型: String  
 说明: 如果日志输出模式为file, 改选项指定文件路径.
