@@ -5,7 +5,7 @@ sidebar_label: md-tools 工具
 original_id: md-tools
 ---
 
-CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需要使用md-tools工具将其转化为可读的文本文件。
+CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需要使用md-tools工具(v0.1.0)将其转化为可读的文本文件。
 
 > md-tools工具目前支持 OS X, linux系统；linux版本中包含amd64， arm等主流架构版本，OS x包含主流的amd64版本。
 

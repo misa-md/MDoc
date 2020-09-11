@@ -42,7 +42,7 @@ $ build/bin/CrystalMD --help
 需要注意的是，该文件是二进制文件，无法直接查看，需要转化为可方便查看的文本文件。  
 可以使用`md-tools` 转化工具将二进制文件转化为文本文件md.txt ：
 ```bash
-md-tools -f text -r -i ./crystal_md.origin.out -o md.txt
+md-tools -f text -r 4 -i ./crystal_md.origin.out -o md.txt
 ```
 
 更多关于`md-tools`工具的信息及使用方法请参照**[md-tools 工具](md-tools.md)**章节。
