@@ -17,15 +17,15 @@ original_id: run-md
 
 ```bash
 cd $MD_PATH/example
-mpirun -n 4 ../build/bin/Crystal MD -c config.toml
+mpirun -n 4 ../build/bin/CrystalMD -c config.toml
 ```
 
-更多信息可以通过执行`$MD_PATH/build/bin/Crystal MD --help`命令查看。
+更多信息可以通过执行`$MD_PATH/build/bin/CrystalMD --help`命令查看。
 
 ```bash
 $ cd $MD_PATH
-$ build/bin/Crystal MD --help
-  build/bin/Crystal MD {OPTIONS}
+$ build/bin/CrystalMD --help
+  build/bin/CrystalMD {OPTIONS}
 
     This is Crystal MD program.
 
