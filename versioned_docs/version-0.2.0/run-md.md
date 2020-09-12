@@ -1,7 +1,7 @@
 ---
-id: version-0.3.x-run-md
-title: 运行 Crystal MD
-sidebar_label: 运行 Crystal MD
+id: run-md
+title: "运行 Crystal MD"
+sidebar_label: "运行 Crystal MD"
 original_id: run-md
 ---
 
@@ -27,7 +27,7 @@ $ cd $MD_PATH
 $ build/bin/CrystalMD --help
   build/bin/CrystalMD {OPTIONS}
 
-    This is CrystalMD program.
+    This is Crystal MD program.
 
   OPTIONS:
 
@@ -37,13 +37,5 @@ $ build/bin/CrystalMD --help
 
 ## 2.运行结果
 
-运行完成后，example目录下会多出一个名为crystal_md.\*.out 的二进制文件(crystal_md.\*.out为默认的输出文件名称，可在配置文件中更改)。
-该文件中包含各个指定时间步dump的所有原子信息，如原子类型、id、位置坐标、速度等。
-
-需要注意的是，该文件是二进制文件，无法直接查看，需要转化为可方便查看的文本文件。  
-可以使用`md-tools` 转化工具将二进制文件转化为文本文件md.txt ：
-```bash
-md-tools -f text -r -i ./crystal_md.origin.out -o md.txt
-```
-
-更多关于`md-tools`工具的信息及使用方法请参照**[md-tools 工具](md-tools.md)**章节。
+运行结束后，example目录下会生成 atom dump 文件，按照每个进程输出。
+文件名为 `dump_{rank id}.atom`，其中{rank id}为进程的rank id。

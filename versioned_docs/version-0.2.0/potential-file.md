@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-potential-file
-title: 准备势表文件
-sidebar_label: 准备势表文件
+id: potential-file
+title: "准备势表文件"
+sidebar_label: "准备势表文件"
 original_id: potential-file
 ---
 

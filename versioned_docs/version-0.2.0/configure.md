@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-configure
-title: 配置文件
-sidebar_label: 配置文件
+id: configure
+title: "配置文件"
+sidebar_label: "配置文件"
 original_id: configure
 ---
 

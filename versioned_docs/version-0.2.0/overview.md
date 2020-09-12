@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-overview
-title: Crystal MD 概览
-sidebar_label: Crystal MD 概览
+id: overview
+title: "Crystal MD 概览"
+sidebar_label: "Crystal MD 概览"
 original_id: overview
 ---
 

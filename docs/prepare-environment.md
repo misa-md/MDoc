@@ -1,7 +1,7 @@
 ---
 id: prepare-environment
-title: 准备环境
-sidebar_label: 准备环境
+title: "准备环境"
+sidebar_label: "准备环境"
 ---
 
 在 Linux 上构建 Crystal MD 之前，请在你的系统中安装以下构建工具：

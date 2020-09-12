@@ -1,7 +1,7 @@
 ---
 id: get-source-code
-title: 获取源代码
-sidebar_label: 获取源代码
+title: "获取源代码"
+sidebar_label: "获取源代码"
 ---
 
 注：该文档中均使用 `$MD_PATH` 来指代Crystal MD源码目录。

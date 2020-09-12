@@ -1,11 +1,10 @@
 ---
-id: version-0.3.x-md-tools
-title: md-tools 工具
-sidebar_label: md-tools 工具
-original_id: md-tools
+id: md-tools
+title: "md-tools 工具"
+sidebar_label: "md-tools 工具"
 ---
 
-CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需要使用md-tools工具(v0.1.0)将其转化为可读的文本文件。
+CrystalMD 模拟结束后，会产生二进制的原子信息文件，我们需要使用 md-tools 工具(v0.1.0)将其转化为可读的文本文件。
 
 > md-tools工具目前支持 OS X, linux系统；linux版本中包含amd64， arm等主流架构版本，OS x包含主流的amd64版本。
 
@@ -33,7 +32,7 @@ OPTIONS:
     -r, --ranks <RANKS>      ranks to run the parallel program
 ```
 
-更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/crystal-md/md-tools。
+更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/misa-md/md-tools。
 
 ### 1.2 转换模拟结果文件到文本文件
 命令示例：

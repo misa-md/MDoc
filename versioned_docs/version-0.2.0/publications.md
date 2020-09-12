@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-publications
-title: 相关论文
-sidebar_label: 相关论文
+id: publications
+title: "相关论文"
+sidebar_label: "相关论文"
 original_id: publications
 ---
 

@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-getting-started
-title: 快速入门
-sidebar_label: 快速入门
+id: getting-started
+title: "快速入门"
+sidebar_label: "快速入门"
 original_id: getting-started
 ---
 

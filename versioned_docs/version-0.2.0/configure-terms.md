@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-configure-terms
-title: 配置项说明
-sidebar_label: 配置项说明
+id: configure-terms
+title: "配置项说明"
+sidebar_label: "配置项说明"
 original_id: configure-terms
 ---
 

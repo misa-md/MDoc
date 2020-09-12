@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-get-source-code
-title: 获取源代码
-sidebar_label: 获取源代码
+id: get-source-code
+title: "获取源代码"
+sidebar_label: "获取源代码"
 original_id: get-source-code
 ---
 

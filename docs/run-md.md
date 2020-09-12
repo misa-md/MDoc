@@ -1,7 +1,7 @@
 ---
 id: run-md
-title: 运行 Crystal MD
-sidebar_label: 运行 Crystal MD
+title: "运行 Crystal MD"
+sidebar_label: "运行 Crystal MD"
 ---
 
 

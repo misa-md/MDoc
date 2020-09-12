@@ -1,7 +1,7 @@
 ---
-id: version-0.2.0-compiling
-title: 编译构建
-sidebar_label: 编译构建
+id: compiling
+title: "编译构建"
+sidebar_label: "编译构建"
 original_id: compiling
 ---
 

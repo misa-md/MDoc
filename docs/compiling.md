@@ -1,7 +1,7 @@
 ---
 id: compiling
-title: 编译构建
-sidebar_label: 编译构建
+title: "编译构建"
+sidebar_label: "编译构建"
 ---
 
 Crystal MD使用CMake工具进行编译构建，如果你不熟悉CMake，可以参考CMake的相关文档。

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "docs": {
     "概览": [
       "overview",
@@ -15,6 +15,9 @@
     "运行 MD": [
       "potential-file",
       "run-md"
+    ],
+    "在超算上编译与运行": [
+      "sunway-on-building"
     ],
     "配置": [
       "configure",

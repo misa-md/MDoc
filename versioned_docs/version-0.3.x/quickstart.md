@@ -2,6 +2,7 @@
 id: getting-started
 title: "快速入门"
 sidebar_label: "快速入门"
+original_id: getting-started
 ---
 
 ## 快速入门
