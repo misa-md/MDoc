@@ -69,6 +69,8 @@ pkg install
 ```bash
 cd $MD_PATH
 pkg import --input vendor-20190725-003851.426644.tar
+pkg fetch
+pkg install
 ```
 
 ### 2.3 直接解压依赖包

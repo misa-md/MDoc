@@ -32,6 +32,7 @@ $ build/bin/CrystalMD --help
 
       -h, --help                    Display this help menu
       -c[conf], --conf=[conf]       The configure file
+      -v, --version                 show version number
 ```
 
 ## 2.运行结果
