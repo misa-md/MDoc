@@ -16,9 +16,6 @@ module.exports = {
       "potential-file",
       "run-md"
     ],
-    "在超算上编译与运行": [
-      "sunway-on-building"
-    ],
     "配置": [
       "configure",
       "configure-terms"
@@ -27,7 +24,4 @@ module.exports = {
       "md-tools"
     ]
   },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
-  }
 }
