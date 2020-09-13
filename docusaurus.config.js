@@ -24,6 +24,7 @@ module.exports = {
   customFields: {
     users: users,
     repoUrl: 'https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD',
+    repoEditUrl: 'https://github.com/misa-md/MDoc/edit/master/',
   },
   themeConfig: {
     navbar: {

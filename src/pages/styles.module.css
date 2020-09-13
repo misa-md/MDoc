@@ -44,7 +44,11 @@
   width: 256px;
 }
 
-.usersMore {
-  padding: 2rem 2rem;
+.usersMore, .addUserBtn {
+  padding: 2rem 0rem;
   text-align: center;
+}
+
+.usersProse {
+  margin-top: 2.5rem;
 }

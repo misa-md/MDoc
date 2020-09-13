@@ -86,7 +86,6 @@ const Showcase = () => {
   if (!siteConfig.customFields) {
     return null;
   }
-  console.log(siteConfig);
   if ((siteConfig.customFields.users || []).length === 0) {
     return null;
   }
