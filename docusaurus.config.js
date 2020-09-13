@@ -10,7 +10,7 @@ const users = [
   },
 ];
 
-const siteBaseUrl = process.env.NODE_ENV === 'production'? '/CrystalMD/MDoc/' : '/'
+const siteBaseUrl = process.env.DOC_SERVER_PATH? process.env.DOC_SERVER_PATH : '/'
 
 module.exports = {
   title: 'Crystal MD',
