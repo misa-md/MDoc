@@ -17,7 +17,7 @@ module.exports = {
   tagline: 'A massively parallel molecular dynamics simulation program',
   url: 'https://hpcer.pages.hpcer.dev/CrystalMD/MDoc',
   baseUrl: siteBaseUrl,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   favicon: 'img/favicon.ico',
   organizationName: 'USTB', // Usually your GitHub org/user name.
   projectName: 'MDoc', // Usually your repo name.
@@ -51,9 +51,13 @@ module.exports = {
           position: 'right',
           items: [
             {
-              label: '0.3.x',
+              label: '0.4.0',
               to: 'docs/overview',
-              activeBaseRegex: 'docs/(?!0.2.0|0.3.x|next)',
+              activeBaseRegex: 'docs/(?!0.2.0|0.3.x|0.4.0|next)',
+            },
+            {
+              label: '0.3.x',
+              to: 'docs/0.3.x/overview',
             },
             {
               label: '0.2.0',
@@ -68,6 +72,7 @@ module.exports = {
         },
       ],
     },
+    image: 'img/undraw_online.svg',
     footer: {
       style: 'light',
       links: [
@@ -142,4 +147,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [],
 };

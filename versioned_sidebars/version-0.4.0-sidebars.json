@@ -1,0 +1,90 @@
+{
+  "version-0.4.0/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "概览",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.4.0/publications"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "快速入门",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/getting-started"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "编译 Crystal MD",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/prepare-environment"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.4.0/get-source-code"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.4.0/compiling"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "运行 MD",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/potential-file"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.4.0/run-md"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "配置",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/configure"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.4.0/configure-terms"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "工具",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.4.0/md-tools"
+        }
+      ]
+    }
+  ]
+}
