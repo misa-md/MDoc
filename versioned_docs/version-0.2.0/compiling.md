@@ -41,8 +41,7 @@ cmake --build ./build -j 4
 ```
 
 ## v0.2.0 版本已知的编译问题
-1.  no matching function for call to 'toml:: Value::as<long int>() const'
-
+1.  no matching function for call to `toml:: Value::as<long int>() const`
 ```long
 config.cpp: In member function 'void config::resolveConfig(std::__cxx11::string)':
 CrystalMD-v0.2.0/src/config.cpp:94:45: error: no matching function for call to 'toml::Value::as<long int>() const'

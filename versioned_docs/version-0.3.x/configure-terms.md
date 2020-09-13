@@ -40,7 +40,6 @@ original_id: configure-terms
 类型：Float;  
 单位：开, K;  
 说明：初始化原子信息时的系统温度;  
- <!--仅 simulation.createphase.create_phase 为 true 时有效 -->
 
 ## simulation.createphase.create_seed
 类型：Integer;  
