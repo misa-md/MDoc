@@ -2,6 +2,7 @@
 id: get-source-code
 title: "获取源代码"
 sidebar_label: "获取源代码"
+original_id: get-source-code
 ---
 
 注：该文档中均使用 `$MD_PATH` 来指代Crystal MD源码目录。
@@ -69,8 +70,6 @@ pkg install
 ```bash
 cd $MD_PATH
 pkg import --input vendor-20190725-003851.426644.tar
-pkg fetch
-pkg install
 ```
 
 ### 2.3 直接解压依赖包

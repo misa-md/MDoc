@@ -2,6 +2,7 @@
 id: overview
 title: "Crystal MD 概览"
 sidebar_label: "Crystal MD 概览"
+original_id: overview
 ---
 
 ## Crystal MD 简介

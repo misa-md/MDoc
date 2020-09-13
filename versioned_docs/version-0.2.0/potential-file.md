@@ -2,6 +2,7 @@
 id: potential-file
 title: "准备势表文件"
 sidebar_label: "准备势表文件"
+original_id: potential-file
 ---
 
 Crystal MD使用EAM势进行原子间的力的计算, 在开始运行之前，需要准备EAM势函数表。

@@ -2,6 +2,7 @@
 id: compiling
 title: "编译构建"
 sidebar_label: "编译构建"
+original_id: compiling
 ---
 
 Crystal MD使用CMake工具进行编译构建，如果你不熟悉CMake，可以参考CMake的相关文档。
@@ -31,9 +32,6 @@ cmake --build ./build --target install # install
 |  参数 | 取值 | 默认值  |  说明 |
 | :-   | :-:  | :-:	| :-   |
 | TEST_ENABLE_FLAG       | ON/OFF	| ON | 是否构建test (单元测试) |
-| MD_RAND  | LCG/MT/STC/xoshiro/LEGACY | MT | 随机数生成器 |
-
-注: Debug 模式下，使用的是rand()函数生成随机数。
 
 例如，如果你不希望构建单元测试tests目录，可以使用如下的命令进行构建：
 ```bash

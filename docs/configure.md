@@ -1,7 +1,7 @@
 ---
 id: configure
-title: 配置文件
-sidebar_label: 配置文件
+title: "配置文件"
+sidebar_label: "配置文件"
 ---
 
 Crystal MD 从 v0.4.0 开始，使用 [yaml](https://yaml.org) 格式开始作为配置文件的格式（v0.2.0 和 v0.3.x 使用 [toml](https://github.com/toml-lang/toml) 格式)。

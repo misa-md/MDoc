@@ -1,7 +1,7 @@
 ---
 id: configure-terms
-title: 配置项说明
-sidebar_label: 配置项说明
+title: "配置项说明"
+sidebar_label: "配置项说明"
 ---
 
 配置文件的示例见`$MD_PATH/example/config.yaml`, 其中配置文件的各个字段如下，你可以根据你的需求修改各选项的值。
