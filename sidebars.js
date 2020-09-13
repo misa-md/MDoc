@@ -7,7 +7,7 @@ module.exports = {
     "快速入门": [
       "getting-started"
     ],
-    "编译 Crystal MD": [
+    "编译 MISA-MD": [
       "prepare-environment",
       "get-source-code",
       "compiling"

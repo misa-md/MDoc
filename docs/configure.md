@@ -4,16 +4,16 @@ title: "配置文件"
 sidebar_label: "配置文件"
 ---
 
-Crystal MD 从 v0.4.0 开始，使用 [yaml](https://yaml.org) 格式开始作为配置文件的格式（v0.2.0 和 v0.3.x 使用 [toml](https://github.com/toml-lang/toml) 格式)。
+MISA-MD 从 v0.4.0 开始，使用 [yaml](https://yaml.org) 格式开始作为配置文件的格式（v0.2.0 和 v0.3.x 使用 [toml](https://github.com/toml-lang/toml) 格式)。
 
 ## 1.示例
 
-以下展示了Crystal MD配置文件的部分示例：
+以下展示了 MISA-MD 配置文件的部分示例：
 ```yaml
-# <a href='https://yaml.org'>yaml</a> configure file for Crystal-MD application,
+# <a href='https://yaml.org'>yaml</a> configure file for MISA-MD application,
 # writen by <a href='mailto:genshenchu@gmail.com'>genshen</a>"
 
-title: "Crystal-MD Configure File"
+title: "MISA-MD Configure File"
 version: "0.4.0"
 contributors:
   original_author: "BaiHe"
@@ -45,8 +45,8 @@ creation:
 output:
   dump:
     atoms_dump_mode: "copy"
-    atoms_dump_file_path: "crystal_mdl.{}.out"
-    origin_dump_path: "crystal_mdl.origin.out"
+    atoms_dump_file_path: "misa_mdl.{}.out" 
+    origin_dump_path: "misa_mdl.origin.out"
     atoms_dump_interval: 10
     by_frame: true
   thermo:
@@ -78,13 +78,13 @@ stages:
 ```
 
 ## 2.使用配置文件
-你可以在运行Crystal MD程序时，通过命令行参数指定配置文件路径，程序能够读取配置文件，以进行后续模拟，例如：
+你可以在运行 MISA-MD 程序时，通过命令行参数指定配置文件路径，程序能够读取配置文件，以进行后续模拟，例如：
 
 ```bash
-mpirun -n 4 /path/of/CrystalMD  -c /path/of/config.yaml
+mpirun -n 4 /path/of/misamd  -c /path/of/config.yaml
 ```
 或者：
 
 ```bash
-mpirun -n 4 /path/of/CrystalMD  --conf=/path/of/config.yaml
+mpirun -n 4 /path/of/misamd  --conf=/path/of/config.yaml
 ```

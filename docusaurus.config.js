@@ -13,7 +13,7 @@ const users = [
 const siteBaseUrl = process.env.DOC_SERVER_PATH? process.env.DOC_SERVER_PATH : '/'
 
 module.exports = {
-  title: 'Crystal MD',
+  title: 'MISA-MD',
   tagline: 'A massively parallel molecular dynamics simulation program',
   url: 'https://hpcer.pages.hpcer.dev/CrystalMD/MDoc',
   baseUrl: siteBaseUrl,
@@ -28,9 +28,9 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
-      title: 'Crystal MD',
+      title: 'MISA-MD',
       logo: {
-        alt: 'Crystal MD Logo',
+        alt: 'MISA-MD Logo',
         src: 'img/logo.svg',
       },
       items: [

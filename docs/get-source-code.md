@@ -4,7 +4,7 @@ title: "获取源代码"
 sidebar_label: "获取源代码"
 ---
 
-注：该文档中均使用 `$MD_PATH` 来指代Crystal MD源码目录。
+注：该文档中均使用 `$MD_PATH` 来指代 MISA-MD 源码目录。
 
 ## 1. 获取源码
 你可以使用以下任意一种方式获取代码：git clone、下载源码包。
@@ -14,39 +14,43 @@ sidebar_label: "获取源代码"
 如果你的系统中安装了git工具，可以使用git来clone源代码。
 这样的好处是，你可以随时切换使用其他任意版本的代码。
 ```bash
-git clone https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD.git # https
+git clone https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD.git MISA-MD # https
+# or clone from github
+git clone https://github.com/misa-md/MISA-MD.git
 ```
 
 或者，如果你配置了ssh key, 也可以使用ssh协议进行clone:
 ```bash
-git clone ssh://git@git.hpcer.dev:2222/HPCer/CrystalMD/CrystalMD.git # ssh
+git clone ssh://git@git.hpcer.dev:2222/HPCer/CrystalMD/CrystalMD.git MISA-MD # ssh
+# or clone from github
+git clone git@github.com:misa-md/MISA-MD.git
 ```
 
-上述 git clone 命令会创建一个名为 Crystal MD 的目录。
+上述 git clone 命令会创建一个名为 MISA-MD 的目录。
 克隆完成后，你可以选择通过调用以下命令来构建特定分支（如版本分支）
 ```bash
-$ cd $MD_PATH # Crystal MD源码目录
+$ cd $MD_PATH # MISA-MD 源码目录
 $ git checkout Branch_Or_Tag
 # where ' Branch_Or_Tag' is the desired branch or tag.
 ```
-例如，要使用 v0.3.0 版本而不是主分支，可使用以下命令进行切换 `git checkout v0.3.0`.
+例如，要使用 v0.4.0 版本而不是主分支，可使用以下命令进行切换 `git checkout v0.4.0`.
 
 ### 1.2 直接下载源码包
 使用wget命令或者在浏览器中下载源代码压缩包。  
-如，下载v0.3.0版本的源码包：
+如，下载v0.4.0版本的源码包：
 ```bash
-$ wget -O CrystalMD-v0.3.0.tat.gz \
-  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/-/archive/v0.3.0/CrystalMD-v0.3.0.tar.gz
-$ tar -zxvf CrystalMD-v0.3.0.tar.gz
+$ wget -O MISA-MD-v0.4.0.tat.gz \
+  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/-/archive/v0.4.0/CrystalMD-v0.4.0.tar.gz
+$ tar -zxvf MISA-MD-v0.4.0.tar.gz
 ```
 
 ## 2. 安装依赖
 
 获取的源码中不包含该程序的依赖包，所以还需要额外的工作来安装依赖。
 
-Crystal MD 依赖于一些开源库, 如[kiwi](https://git.hpcer.dev/genshen/kiwi),
+MISA-MD 依赖于一些开源库, 如[kiwi](https://git.hpcer.dev/genshen/kiwi),
 googletest, fmt, [args](https://github.com/Taywee/args/)等。
-可以使用[pkg](https://github.com/genshen/pkg/)依赖管理工具下载依赖包或者直接将对应依赖包导入到Crystal MD源码`vendor`目录。
+可以使用[pkg](https://github.com/genshen/pkg/)依赖管理工具下载依赖包或者直接将对应依赖包导入到 MISA-MD源码`vendor`目录。
 
 其中，`pkg`工具的安装见 https://github.com/genshen/pkg/。
 
@@ -75,11 +79,11 @@ pkg install
 
 ### 2.3 直接解压依赖包
 
-直接导入依赖是将已有的依赖压缩包解压解压Crystal MD的源码的`vendor`目录。
+直接导入依赖是将已有的依赖压缩包解压解压 MISA-MD 的源码的`vendor`目录。
 
 假设依赖压缩包文件名为：vendor-20190725-003851.426644.tar, 可以通过以下命令加入依赖包:
 ```bash
 mkdir -p $MD_PATH/vendor
 cd $MD_PATH/vendor
-tar xvf path/of/vendor-20190725-003851.426644.tar # tar to direcooty.
+tar xvf path/of/vendor-20200725-003851.426644.tar # tar to direcooty.
 ```

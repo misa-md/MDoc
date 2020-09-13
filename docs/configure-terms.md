@@ -85,7 +85,7 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 ### output.dump.atoms_dump_file_path
 类型：String  
 说明：copy模式下，输出二进制文件路径;
-如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个大括号(如`crystal_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
+如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个大括号(如`misa_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
 
 ### output.dump.origin_dump_path
 类型：String  

@@ -4,7 +4,7 @@ title: "编译构建"
 sidebar_label: "编译构建"
 ---
 
-Crystal MD使用CMake工具进行编译构建，如果你不熟悉CMake，可以参考CMake的相关文档。
+MISA-MD使用CMake工具进行编译构建，如果你不熟悉CMake，可以参考CMake的相关文档。
 在正式进行构建之前，确保你的系统已经安装并配置了CMake工具、相符版本的c++编译器、MPI环境等，
 且确保已经正确配置了环境相关变量(如**CC** **CXX**环境变量)。
 
@@ -15,7 +15,7 @@ cd $MD_PATH
 cmake -B./build -H./
 cmake --build ./build -j 4  # build using 4 processors.
 ```
-执行以上步骤后，编译完成的可执行Crystal MD程序会放在`$MD_PATH/build/bin`目录。
+执行以上步骤后，编译完成的可执行 MISA-MD 程序会放在`$MD_PATH/build/bin`目录。
 
 ## 2.构建选项
 如果你需要将编译完成的二进制文件安装到指定目录，可以用以下命令进行构建,并安装：

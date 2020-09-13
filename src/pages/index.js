@@ -113,7 +113,7 @@ const Showcase = () => {
   return (
     <div className="productShowcaseSection paddingBottom">
       <h2>Who is Using This?</h2>
-      <p>Crystal MD is used by all these people</p>
+      <p>MISA-MD is used by all these people</p>
       <div className="logos row">{showcase}</div>
       <div className="row">
         <div className={clsx("col col--12", styles.buttons, styles.usersMore)}>
@@ -187,7 +187,7 @@ const Contributing = () => (
         <p>
           Read our contributing guide to learn about our development process,
           how to propose bugfixes and improvements, and how to build and test
-          your changes to Crystal MD.
+          your changes to MISA-MD.
         </p>
       </>
     }
