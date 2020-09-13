@@ -21,6 +21,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'USTB', // Usually your GitHub org/user name.
   projectName: 'MDoc', // Usually your repo name.
+  customFields: {
+    users: users,
+    repoUrl: 'https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD',
+  },
   themeConfig: {
     navbar: {
       title: 'Crystal MD',
