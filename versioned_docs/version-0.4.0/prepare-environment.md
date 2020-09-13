@@ -5,7 +5,7 @@ sidebar_label: "准备环境"
 ---
 
 在 Linux 上构建 Crystal MD 之前，请在你的系统中安装以下构建工具：
-- [CMake](http://cmake.org), 3.6及以上版本;
+- [CMake](http://cmake.org), 3.8及以上版本;
 - 支持C++11特性的C++编译器;
 - MPI环境;
 - [pkg](https://github.com/genshen/pkg) c/c++依赖管理工具;
@@ -18,7 +18,7 @@ sidebar_label: "准备环境"
 各类编译器对c++11特性的支持情况可参考[相关文档](http://zh.cppreference.com/w/cpp/compiler_support#cpp11})。
 
 我们测试过以下编译器可以正常工作：
-- GUN g++ 4.8及以后版本
+- GUN g++ 5.1及以后版本
 - LLVM Clang++ 3.3及以上版本
 - Intel icc 2017
 
@@ -32,7 +32,7 @@ sidebar_label: "准备环境"
 例如, 对于64位amd64架构的Linux操作系统：
 ```bash
 mkdir -p ~/.local/bin
-wget https://github.com/genshen/pkg/releases/download/v0.3.0-alpha/pkg-linux-amd64 -O ~/.local/bin/pkg
+wget https://github.com/genshen/pkg/releases/download/v0.4.1/pkg-linux-amd64 -O ~/.local/bin/pkg
 chmod +x ~/.local/bin/pkg
 export PATH=~/.loca/bin:$PATH
 ```
