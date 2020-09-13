@@ -30,28 +30,48 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/overview',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/misa-md/MISA-MD',
-          label: 'GitHub',
+          to: '/help',
+          label: 'Help',
+          position: 'left',
+        },
+        {
+          label: 'Version',
+          to: 'docs',
           position: 'right',
+          items: [
+            {
+              label: '0.3.x',
+              to: 'docs/overview',
+              activeBaseRegex: 'docs/(?!0.2.0|0.3.x|next)',
+            },
+            {
+              label: '0.2.0',
+              to: 'docs/0.2.0/overview',
+            },
+            {
+              label: 'Master/Unreleased',
+              to: 'docs/next/overview',
+              activeBaseRegex: 'docs/next/(?!support|team|resources)',
+            },
+          ],
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Docs',
           items: [
             {
               label: 'User Docs',
-              to: 'docs/',
+              to: 'docs/overview',
             },
           ],
         },
@@ -86,6 +106,9 @@ module.exports = {
           ],
         },
       ],
+      logo: {
+        src: 'img/logo.svg',
+      },
       copyright: `Copyright © ${new Date().getFullYear()} HPCDE lab of USTB. Built with Docusaurus.`,
     },
   },
@@ -95,7 +118,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          // homePageId: 'overview',
+          path: 'docs',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           editUrl:
             'https://git.hpcer.dev/HPCer/CrystalMD/MDoc/blob/master/docs/',
         },
