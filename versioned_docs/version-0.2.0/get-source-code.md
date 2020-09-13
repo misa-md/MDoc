@@ -6,7 +6,7 @@ original_id: get-source-code
 ---
 
 你可以使用以下任意一种方式获取代码：git clone、下载源码包。
-如果你已经拥有源代码，可以忽略此步骤，直接跳到[安装依赖](install_dep)小节。
+如果你已经拥有源代码，可以忽略此步骤，直接跳到[编译构建](compiling.md)小节。
 
 !> 注：该文档中均使用 `$MD_PATH` 来指代Crystal MD源码目录。
 

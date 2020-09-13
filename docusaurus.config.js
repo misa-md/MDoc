@@ -46,7 +46,7 @@ module.exports = {
         },
         {
           label: 'Version',
-          to: 'docs',
+          to: 'docs/overview',
           position: 'right',
           items: [
             {

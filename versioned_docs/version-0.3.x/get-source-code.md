@@ -46,7 +46,7 @@ $ tar -zxvf CrystalMD-v0.3.0.tar.gz
 获取的源码中不包含该程序的依赖包，所以还需要额外的工作来安装依赖。
 
 Crystal MD 依赖于一些开源库, 如[kiwi](https://git.hpcer.dev/genshen/kiwi),
-googletest, fmt, [args]({https://github.com/Taywee/args/)等。
+googletest, fmt, [args](https://github.com/Taywee/args/)等。
 可以使用[pkg](https://github.com/genshen/pkg/)依赖管理工具下载依赖包或者直接将对应依赖包导入到Crystal MD源码`vendor`目录。
 
 其中，`pkg`工具的安装见 https://github.com/genshen/pkg/。
