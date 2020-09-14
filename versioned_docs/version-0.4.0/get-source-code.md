@@ -29,15 +29,15 @@ $ cd $MD_PATH # Crystal MD源码目录
 $ git checkout Branch_Or_Tag
 # where ' Branch_Or_Tag' is the desired branch or tag.
 ```
-例如，要使用 v0.3.0 版本而不是主分支，可使用以下命令进行切换 `git checkout v0.3.0`.
+例如，要使用 v0.4.0 版本而不是主分支，可使用以下命令进行切换 `git checkout v0.4.0`.
 
 ### 1.2 直接下载源码包
 使用wget命令或者在浏览器中下载源代码压缩包。  
-如，下载v0.3.0版本的源码包：
+如，下载v0.4.0版本的源码包：
 ```bash
-$ wget -O CrystalMD-v0.3.0.tat.gz \
-  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/-/archive/v0.3.0/CrystalMD-v0.3.0.tar.gz
-$ tar -zxvf CrystalMD-v0.3.0.tar.gz
+$ wget -O CrystalMD-v0.4.0.tat.gz \
+  https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD/-/archive/v0.4.0/CrystalMD-v0.4.0.tar.gz
+$ tar -zxvf CrystalMD-v0.4.0.tar.gz
 ```
 
 ## 2. 安装依赖
