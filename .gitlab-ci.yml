@@ -16,7 +16,7 @@ build-website:
   script:
     - yarn build
   cache:
-    key: docusaurus-2.0.0-alpha.64 # caching by docusaurus version.
+    key: docusaurus-2.0.0-alpha.66 # caching by docusaurus version.
     paths:
     - node_modules/
   artifacts:
