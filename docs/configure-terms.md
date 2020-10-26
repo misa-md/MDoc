@@ -97,7 +97,7 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 
 ### output.dump.by_frame
 类型: Boolean  
-说明: 每隔`output.atoms_dump_interval`项指定到时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
+说明: 每隔`output.atoms_dump_interval`项指定的时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
 
 ### output.thermo
 说明：热力学信息的输出相关配置;
@@ -115,7 +115,7 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 
 ### output.logs.logs_filename
 类型：String  
-说明：如果日志输出模式为file, 改选项指定文件路径.
+说明：如果日志输出模式为file, 该选项指定文件路径.
 
 ## STAGES
 stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci 和 github action。每个 stage 中依据该stage的配置参数执行若干时间步。  
@@ -132,7 +132,7 @@ stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci �
 ### [stage].step_length
 类型：Float  
 单位：皮秒, ps;  
-说明：该 stage 执行的模拟所使用的时间步长，如步指定则使用默认时间步长(由`simulation.def_timesteps_length`指定);
+说明：该 stage 执行的模拟所使用的时间步长，如不指定则使用默认时间步长(由`simulation.def_timesteps_length`指定);
 
 ### [stage].rescale
 说明：每隔一定时间步进行一次rescale，将体系温度重新设置为给定的温度; 该选项指定rescale 的相关参数;  

@@ -117,7 +117,7 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 
 ## output.by_frame
 类型: Boolean  
-说明: 每隔`output.atoms_dump_interval`项指定到时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
+说明: 每隔`output.atoms_dump_interval`项指定的时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
 
 ## output.logs
 程序日志:可以选择输出到stdio或者文件.
@@ -128,4 +128,4 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 
 ## output.logs.logs_filename
 类型: String  
-说明: 如果日志输出模式为file, 改选项指定文件路径.
+说明: 如果日志输出模式为file, 该选项指定文件路径.
