@@ -18,6 +18,7 @@ module.exports = {
     ],
     "配置": [
       "configure",
+      "model-cascade-collision",
       "configure-terms"
     ],
     "工具": [
