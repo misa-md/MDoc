@@ -3,6 +3,7 @@ id: model-cascade-collision
 title: "利用 MISA-MD 进行级联碰撞模拟"
 sidebar_label: "利用 MISA-MD 进行级联碰撞模拟"
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## 基本原理
 MISA-MD 作为一款分子动力学模拟软件，以粒子(分子/原子）作为研究对象，通过势函数计算粒子受力，并通过牛顿运动定律计算粒子的运动。
@@ -100,4 +101,4 @@ PKA 相关的参数设置说明如下：
 采用ovitl工具自带的 WS 分析方法，可以得到每个输出时间步的缺陷数量和缺陷的位置信息。
 
 如下图即是其中一个输出时间步的可视化结果。
-<img src="/img/docs/ovito.png" width="360"/>
+<img src={useBaseUrl('img/docs/ovito.png')} width="360"/>
