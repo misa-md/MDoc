@@ -5,7 +5,7 @@ sidebar_label: "准备环境"
 ---
 
 在 Linux 上构建 MISA-MD 之前，请在你的系统中安装以下构建工具：
-- [CMake](http://cmake.org), 3.8及以上版本;
+- [CMake](http://cmake.org), 3.15 及以上版本;
 - 支持C++11特性的C++编译器;
 - MPI环境;
 - [pkg](https://github.com/genshen/pkg) c/c++依赖管理工具;
