@@ -46,27 +46,14 @@ module.exports = {
           position: 'left',
         },
         {
-          label: 'Version',
-          to: 'docs/overview',
+          type: 'docsVersionDropdown',
+          // to: 'docs/overview',
           position: 'right',
-          items: [
+          // dropdownActiveClassDisabled: true,
+          dropdownItemsAfter: [
             {
-              label: '0.4.0',
-              to: 'docs/overview',
-              activeBaseRegex: 'docs/(?!0.2.0|0.3.x|0.4.0|next)',
-            },
-            {
-              label: '0.3.x',
-              to: 'docs/0.3.x/overview',
-            },
-            {
-              label: '0.2.0',
-              to: 'docs/0.2.0/overview',
-            },
-            {
-              label: 'Master/Unreleased',
-              to: 'docs/next/overview',
-              activeBaseRegex: 'docs/next/(?!support|team|resources)',
+              to: '/versions',
+              label: 'All versions',
             },
           ],
         },
@@ -134,6 +121,12 @@ module.exports = {
           showLastUpdateTime: true,
           editUrl:
             'https://git.hpcer.dev/HPCer/CrystalMD/MDoc/blob/master/docs/',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: `v0.5.0 (unreleased)`,
+            },
+          },
         },
         blog: {
           showReadingTime: true,
