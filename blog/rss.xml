@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>MISA-MD Blog</title>
+        <link>https://misa-md.github.io/MDoc/blog</link>
+        <description>MISA-MD Blog</description>
+        <lastBuildDate>Sat, 12 Sep 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[MISA-MD v0.4.0 release]]></title>
+            <link>https://misa-md.github.io/MDoc/MDoc/blog/2020/09/12/md-v0.4.0-release</link>
+            <guid>MISA-MD v0.4.0 release</guid>
+            <pubDate>Sat, 12 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[todo: write a release blog.]]></description>
+        </item>
+    </channel>
+</rss>

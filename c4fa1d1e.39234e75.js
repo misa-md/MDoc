@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[58],{116:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"MISA-MD v0.4.0 release","permalink":"/MDoc/blog/2020/09/12/md-v0.4.0-release"}]}')}}]);
