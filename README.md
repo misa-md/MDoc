@@ -24,6 +24,13 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+Available environment variables can be used in building.
+- DOC_DEPLOY_PATH
+- DOC_GIT_REPO: url of document git repo without `.git` as postfix.
+- DOC_EDIT_URL: default value is based on `DOC_GIT_REPO`
+- SOURCE_GIT_REPO: git repo of your project
+- DOC_SITE_URL: document site url.
+
 ### Deployment
 
 ```

@@ -14,7 +14,10 @@ function Version() {
     (version) => version !== latestVersion && version.name !== 'current',
   );
   const stableVersion = pastVersions.shift();
-  const repoUrl = siteConfig.url ? siteConfig.url : `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
+  let repoUrl = siteConfig.url ? siteConfig.url : `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
+  if (siteConfig.customFields && siteConfig.customFields.repoUrl) {
+    repoUrl = siteConfig.customFields.repoUrl
+  }
 
   const versionedNavUrl = (base) => {
       return base + '/overview';
@@ -104,11 +107,11 @@ function Version() {
                     <td>
                       <Link to={`${versionedNavUrl(version.path)}`}>Documentation</Link>
                     </td>
-                    {/* <td>
+                    <td>
                       <a href={`${repoUrl}/releases/tag/v${version.name}`}>
                         Release Notes
                       </a>
-                    </td> */}
+                    </td>
                   </tr>
                 ))}
               </tbody>

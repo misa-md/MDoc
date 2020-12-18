@@ -30,7 +30,7 @@ function Users() {
       ));
   }
 
-  let editUrl = `${siteConfig.url}/edit/master/`; // github default deit url
+  let editUrl = `${siteConfig.url}/edit/master/`; // github default edit url
   if (siteConfig.customFields && siteConfig.customFields.repoEditUrl) {
     editUrl = siteConfig.customFields.repoEditUrl
   }

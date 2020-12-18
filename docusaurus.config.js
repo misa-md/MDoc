@@ -10,12 +10,24 @@ const users = [
   },
 ];
 
-const siteBaseUrl = process.env.DOC_SERVER_PATH? process.env.DOC_SERVER_PATH : '/'
+// note: if set process.env.DOC_DEPLOY_PATH, it must start and end with '/'.
+const siteBaseUrl = process.env.NODE_ENV === 'production'? (process.env.DOC_DEPLOY_PATH? process.env.DOC_DEPLOY_PATH : '/MDoc') : '/'
+
+const defaultDocGitRepo = 'https://git.hpcer.dev/HPCer/MISA-MD/MDoc'
+const defaultSourceGitRepo = 'https://git.hpcer.dev/HPCer/MISA-MD/MISA-MD'
+const defaultSiteUrl = 'https://hpcer.pages.hpcer.dev/MISA-MD/MDoc'
+
+const docGitRepo = process.env.DOC_GIT_REPO? process.env.DOC_GIT_REPO : defaultDocGitRepo
+// for document edit url, fallback is the same for github and gitlab.
+const docEditUrl = process.env.DOC_EDIT_URL? process.env.DOC_EDIT_URL : docGitRepo + '/blob/master/'
+const docSiteUrl = process.env.DOC_SITE_URL? process.env.DOC_SITE_URL : defaultSiteUrl
+const sourceGitRepo = process.env.SOURCE_GIT_REPO ? process.env.SOURCE_GIT_REPO : defaultSourceGitRepo
+
 
 module.exports = {
   title: 'MISA-MD',
   tagline: 'A massively parallel molecular dynamics simulation program',
-  url: 'https://hpcer.pages.hpcer.dev/CrystalMD/MDoc',
+  url: docSiteUrl,
   baseUrl: siteBaseUrl,
   onBrokenLinks: 'log',
   favicon: 'img/favicon.ico',
@@ -23,8 +35,8 @@ module.exports = {
   projectName: 'MDoc', // Usually your repo name.
   customFields: {
     users: users,
-    repoUrl: 'https://git.hpcer.dev/HPCer/CrystalMD/CrystalMD',
-    repoEditUrl: 'https://github.com/misa-md/MDoc/edit/master/',
+    repoUrl: sourceGitRepo,
+    repoEditUrl: docEditUrl,
   },
   themeConfig: {
     navbar: {
@@ -77,7 +89,7 @@ module.exports = {
           items: [
             {
               label: 'Issues',
-              href: 'https://github.com/misa-md/MISA-MD/issues',
+              href: sourceGitRepo + '/issues',
             },
             {
               label: 'Grpup',
@@ -119,8 +131,7 @@ module.exports = {
           path: 'docs',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl:
-            'https://git.hpcer.dev/HPCer/CrystalMD/MDoc/blob/master/docs/',
+          editUrl: docEditUrl,
           lastVersion: 'current',
           versions: {
             current: {
@@ -131,8 +142,7 @@ module.exports = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://git.hpcer.dev/HPCer/CrystalMD/MDoc/blob/master/blog/',
+          editUrl: docEditUrl,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -40,7 +40,10 @@ jobs:
         working-directory: ./
         env:
           CI: true
-          DOC_SERVER_PATH: "/MDoc/"
+          DOC_DEPLOY_PATH: "/MDoc/"
+          DOC_GIT_REPO: "https://github.com/misa-md/MDoc"
+          DOC_SITE_URL: "https://misa-md.github.io/MDoc"
+          SOURCE_GIT_REPO: "https://github.com/misa-md/MISA-MD"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

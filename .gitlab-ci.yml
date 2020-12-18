@@ -10,7 +10,7 @@ build-website:
   tags: [pages]
   stage: build-website
   variables:
-    DOC_SERVER_PATH: "/CrystalMD/MDoc/"
+    DOC_DEPLOY_PATH: "/MISA-MD/MDoc/"
   before_script:
     - yarn install --registry https://registry.npm.taobao.org 
   script:
