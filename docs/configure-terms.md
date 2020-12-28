@@ -41,6 +41,10 @@ sidebar_label: "配置项说明"
 类型：Integer;  
 说明：创建原子信息的随机数种子；仅 `creation.create_phase` 为 true 时有效;  
 
+### creation.create_t_set
+类型：Float;  
+说明：创建的体系的温度；仅 `creation.create_phase` 为 true 时有效;  
+
 ### creation.alloy
 说明：合金元素的相关配置; 该部分仅 `creation.create_phase` 为 true 时有效;  
 

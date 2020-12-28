@@ -48,6 +48,10 @@ sidebar_label: "配置项说明"
 类型：Integer;  
 说明：创建原子时，随机生成不同种类合金原子的随机数种子;  
 
+### creation.create_t_set
+类型：Float;  
+说明：创建的体系的温度；仅 `creation.create_phase` 为 true 时有效;  
+
 ### creation.alloy.ratio
 说明：创建原子时，指定随机生成的各类合金原子比例，例如各类合金的比例Fe:Cu:Ni = 97:2:1;
 
