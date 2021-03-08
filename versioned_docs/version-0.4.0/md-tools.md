@@ -32,7 +32,7 @@ OPTIONS:
     -r, --ranks <RANKS>      ranks to run the parallel program
 ```
 
-更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/misa-md/md-tools。
+更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/misa-md/md-tools 。
 
 ### 1.2 转换模拟结果文件到文本文件
 命令示例：

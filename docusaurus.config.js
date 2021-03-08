@@ -47,10 +47,16 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/overview',
-          activeBasePath: 'docs',
-          label: 'Docs',
+          type: 'doc',
           position: 'left',
+          docId: 'overview',
+          label: 'Docs',
+        },
+        {
+          to: '/md-tools/overview',
+          label: 'md-tools',
+          position: 'left',
+          activeBaseRegex: `/md-tools/`,
         },
         {
           to: '/help',
@@ -150,5 +156,18 @@ module.exports = {
       },
     ],
   ],
-  plugins: [],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'md-tools',
+        path: 'md-tools',
+        routeBasePath: 'md-tools',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        editUrl: docEditUrl,
+        sidebarPath: require.resolve('./sidebars-md-tools.js'),
+      },
+    ],
+  ],
 };
