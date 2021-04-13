@@ -65,7 +65,8 @@ PKG_AUTH=username?token@git.hpcer.dev pkg fetch
 pkg install
 ```
 
-### 2.2 使用pkg导入依赖包
+### 2.2 使用pkg导入离线依赖包
+如下依赖包的直接安装会因为网络等原因中断，可以考虑下载离线依赖包，然后进行导入。  
 假设依赖压缩包文件名为: vendor-20190725-003851.426644.tar, 可以通过以下pkg命令导入依赖包:
 ```bash
 cd $MD_PATH

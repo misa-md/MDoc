@@ -68,7 +68,8 @@ PKG_AUTH=username?token@git.hpcer.dev pkg fetch
 pkg install
 ```
 
-### 2.2 使用pkg导入依赖包
+### 2.2 使用pkg导入离线依赖包
+如下依赖包的直接安装会因为网络等原因中断，可以考虑下载离线依赖包，然后进行导入。  
 假设依赖压缩包文件名为: vendor-20190725-003851.426644.tar, 可以通过以下pkg命令导入依赖包:
 ```bash
 cd $MD_PATH
@@ -76,6 +77,9 @@ pkg import --input vendor-20190725-003851.426644.tar
 pkg fetch
 pkg install
 ```
+
+用户可以从 OSDN 上的 https://osdn.net/pkg/misa-md/dependencies 页面获取各个 MISA-MD 版本的依赖包，然后通过 `pkg import` 导入。  
+例如，如果需要下载 MISA—MD 主分支（master 分支）对应的依赖包，可以通过链接 https://osdn.net/dl/misa-md/misamd-latest-20210413-161112.942981.tar 从[OSDN](https://osdn.net/pkg/misa-md/dependencies) 上下载。
 
 ### 2.3 直接解压依赖包
 
