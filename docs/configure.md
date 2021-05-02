@@ -43,12 +43,17 @@ creation:
       Ni: 1
 
 output:
-  dump:
-    atoms_dump_mode: "copy"
-    atoms_dump_file_path: "misa_mdl.{}.out" 
-    origin_dump_path: "misa_mdl.origin.out"
-    atoms_dump_interval: 10
-    by_frame: true
+  atom_dump:
+    presets:
+      - name: my_dump
+        region: [ 25.0, 25.0, 25.0, 80.4, 80.4, 80.4 ]
+        mode: "copy"
+        file_path: "misa_mdl.{}.out"
+        by_frame: true
+      - name: collision_dump
+        mode: "copy"
+        file_path: "before_collision.{}.out"
+        by_frame: true
   thermo:
     interval: 0
   logs:
@@ -59,6 +64,9 @@ stages:
   - name: rescale
     step_length: 0.001
     steps: 4
+    dump:
+      use: my_dump
+      every_steps: 2
     rescale:
       t: 600
       every_steps: 2
@@ -66,6 +74,9 @@ stages:
   - name: collision
     step_length: 0.0001
     steps: 8
+    dump:
+      use: collision_dump
+      every_steps: 1
     set_v:
       collision_step: 2
       lat: [2, 2, 2, 0]

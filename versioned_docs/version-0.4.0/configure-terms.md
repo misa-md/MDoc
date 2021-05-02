@@ -101,8 +101,8 @@ direct模式输出多个文本文件(每个进程与每一个需要输出的时�
 
 ### output.dump.by_frame
 类型: Boolean  
-说明: 每隔`output.atoms_dump_interval`项指定的时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
-
+说明: 每隔`output.atoms_dump_interval`项指定的时间步数为一帧.
+按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步，否则将会将所有的帧都写入到一个文件中.
 ### output.thermo
 说明：热力学信息的输出相关配置;
 

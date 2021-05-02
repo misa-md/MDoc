@@ -81,27 +81,32 @@ sidebar_label: "配置项说明"
 ### output
 说明：输出相关配置;
 
-### output.dump.atoms_dump_mode
+### output.atom_dump.presets
+说明：预设的体系 dump 配置，包括 dump 文件名、输出模拟等配置，在 stage 中可使用这些预设的 dump 配置。
+
+### output.atom_dump.presets.name
 类型：String  
+说明：预设的 dump 配置的名称，在 stage 中可通过该名称使用对应的预设 dump 配置;
+
+### output.atom_dump.presets.region
+类型：Float 数组，长度: 6;  
+单位: 埃, Å;  
+说明：输出指定区域的粒子信息，该数组指定区域的开始和结束坐标. 
+该参数是可选的，如果不指定，则默认输出模拟体系中所有的粒子信息;
+
+### output.atom_dump.presets.mode
 说明：输出模式，取值为"copy"或者"direct"；copy模式输出一个文件，二进制格式;  
 direct模式输出多个文本文件(每个进程与每一个需要输出的时间步都对应一个文件)，一般用于程序调试;
 
-### output.dump.atoms_dump_file_path
+### output.atom_dump.presets.file_path
 类型：String  
 说明：copy模式下，输出二进制文件路径;
 如果设置了按帧输出(`output.by_frame`为true), 则文件路径中需要有一个大括号(如`misa_mdl.{}.out`),程序输出时会将大括号替换为当前时间步数.  
 
-### output.dump.origin_dump_path
-类型：String  
-说明：copy模式下，输出级联碰撞前一个时间步的体系粒子，该选项指定输出的文件路径; 若该项为空，则不输出;
-
-### output.dump.atoms_dump_interval
-类型：Integer  
-说明：指定每隔一定时间步，输出一次系统中的所有原子信息;  
-
-### output.dump.by_frame
+### output.atom_dump.presets.by_frame
 类型: Boolean  
-说明: 每隔`output.atoms_dump_interval`项指定的时间步数为一帧.按帧输出选项打开时,程序会每一帧生成一个文件并标记输出时的时间步.
+说明: 每隔指定的时间步数输出一次体系的粒子信息（在 stage 中配置）为一帧。
+如果此按帧输出选项打开，程序会在每一帧时创建一个输出文件，否则将会将所有的帧都写入到一个文件中。
 
 ### output.thermo
 说明：热力学信息的输出相关配置;
@@ -168,3 +173,16 @@ stage允许一个模拟流程可以分为若干个stages，借鉴自 gitlab-ci �
 ### [stage].setv.direction
 类型：Integer 数组，长度: 3;  
 说明：用于设置PKA能量对应的速度在三个维度(x,y,z)的分量，或者说是PKA入射方向; 
+
+### [stage].dump
+说明：dump 体系粒子信息的相关参数配置; 
+需要说明的是，dump 配置仅针对当前的 stage 生效，即作用域仅限制在本 stage，
+如果需要在其他 stage 中输出体系粒子信息，需要在其他 stage 中配置对应的 `dump`。
+
+### [stage].dump.use
+类型：String  
+说明：引用的 dump preset 的名称，采用该 preset 中的配置（如文件名、输出区域等）进行体系粒子的输出;
+
+### [stage].dump.every_steps
+类型：Integer  
+说明：每间隔该项指定的时间步数，输出一帧体系中的粒子信息.
