@@ -32,14 +32,14 @@ OPTIONS:
     -r, --ranks <RANKS>      ranks to run the parallel program
 ```
 
-更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/CrystalMD/md-tools 或 https://github.com/misa-md/md-tools 。
+更多md-tools相关内容，请参考 https://git.hpcer.dev/HPCer/MISA-MD/md-tools 或 https://github.com/misa-md/md-tools 。
 
 ### 1.2 转换模拟结果文件到文本文件
 命令示例：
 ```bash
 md-tools -f text -r 16 -i ./crystal_md.origin.out -o origin.txt
 ```
-上面的例子中，-i 选项（或--input选项）指定MD模拟结果的二进制文件路径； -o （或--output） 选项指定转换的可读文本文件路径； -r选项（或--ranks）指定模拟时使用的MPI进程数(这里是16个MPI进程)；--format选项指定转换后的文件格式，目前支持xyz(用于可视化的xyz格式)和text (包含粒子速度、位置、类型等信息的文本文件) 两种格式。
+上面的例子中，-i 选项（或--input选项）指定MD模拟结果的二进制文件路径； -o （或--output） 选项指定转换的可读文本文件路径； -r选项（或--ranks）指定模拟时使用的MPI进程数(这里是16个MPI进程)；-f（或 --format）选项指定转换后的文件格式，目前支持xyz(用于可视化的xyz格式)和text (包含粒子速度、位置、类型等信息的文本文件) 两种格式。
 
 如果要转换为可视化的xyz格式，只需设置--format选项为xyz即可:
 ```bash
