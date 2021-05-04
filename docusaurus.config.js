@@ -30,6 +30,7 @@ module.exports = {
   url: docSiteUrl,
   baseUrl: siteBaseUrl,
   onBrokenLinks: 'log',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'USTB', // Usually your GitHub org/user name.
   projectName: 'MDoc', // Usually your repo name.
@@ -48,10 +49,11 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          position: 'left',
           docId: 'overview',
+          position: 'left',
           label: 'Docs',
         },
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           to: '/md-tools/overview',
           label: 'md-tools',
@@ -65,7 +67,6 @@ module.exports = {
         },
         {
           type: 'docsVersionDropdown',
-          // to: 'docs/overview',
           position: 'right',
           // dropdownActiveClassDisabled: true,
           dropdownItemsAfter: [
@@ -74,6 +75,13 @@ module.exports = {
               label: 'All versions',
             },
           ],
+        },
+        {
+          href: 'https://github.com/misa-md/misa-md',
+          // label: 'GitHub',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -86,7 +94,7 @@ module.exports = {
           items: [
             {
               label: 'User Docs',
-              to: 'docs/overview',
+              to: '/docs/overview',
             },
           ],
         },
@@ -112,7 +120,7 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: 'blog',
+              to: '/blog',
             },
             {
               label: 'GitHub Mirror',
@@ -124,7 +132,7 @@ module.exports = {
       logo: {
         src: 'img/logo.svg',
       },
-      copyright: `Copyright © ${new Date().getFullYear()} HPCDE lab of USTB. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} HPCDE lab, USTB. Built with Docusaurus.`,
     },
   },
   presets: [
