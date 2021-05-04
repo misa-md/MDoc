@@ -111,7 +111,7 @@ const Showcase = () => {
     useBaseUrl("/") + (language ? `${language}/` : "") + page;
 
   return (
-    <div className="productShowcaseSection paddingBottom">
+    <div className={clsx("productShowcaseSection paddingBottom", blockStyle.showcaseSectionPadding)}>
       <h2>Who is Using This?</h2>
       <p>MISA-MD is used by all these people</p>
       <div className="logos row">{showcase}</div>

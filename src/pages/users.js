@@ -65,7 +65,6 @@ function Users() {
                   Add your organization or institution
                 </Link>
                 </div>
-                
               </div>
           </div>
         </section>

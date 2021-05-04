@@ -45,8 +45,10 @@
 }
 
 .usersMore, .addUserBtn {
-  padding: 2rem 0rem;
+  margin-bottom: 1.2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .usersProse {
