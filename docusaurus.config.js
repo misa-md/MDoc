@@ -40,6 +40,8 @@ module.exports = {
     repoEditUrl: docEditUrl,
   },
   themeConfig: {
+    hideableSidebar: true,
+    image: 'img/undraw_online.svg',
     navbar: {
       title: 'MISA-MD',
       logo: {
@@ -85,7 +87,6 @@ module.exports = {
         },
       ],
     },
-    image: 'img/undraw_online.svg',
     footer: {
       style: 'light',
       links: [
