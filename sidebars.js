@@ -21,7 +21,8 @@ module.exports = {
     "编译 MISA-MD": [
       "prepare-environment",
       "get-source-code",
-      "compiling"
+      "compiling",
+      "compiling-with-hip"
     ],
     "运行 MD": [
       "potential-file",
