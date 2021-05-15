@@ -42,6 +42,10 @@ module.exports = {
   themeConfig: {
     hideableSidebar: true,
     image: 'img/undraw_online.svg',
+    prism: {
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/dracula'),
+    },
     navbar: {
       title: 'MISA-MD',
       logo: {
