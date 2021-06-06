@@ -133,3 +133,21 @@ tmpxft_00003686_00000000-5_hip_arch_acc_imp.cudafe1.cpp:(.text+0x3632): undefine
 ```bash
 -DCMAKE_LINKER=hipcc -DCMAKE_CXX_LINK_EXECUTABLE="<CMAKE_LINKER> <FLAGS> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>"
 ```
+
+
+6. NV 平台上，链接阶段错误: "nvlink fatal   : Internal error: duplicate relocations at same address"
+```log
+nvlink error   : Multiple definition of 'd_domain' in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_global_ops.cpp.o', first defined in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_rho_double_buffer_imp.cpp.o'
+nvlink error   : Multiple definition of '_Z5calDfP14_cuAtomElementjj' in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o', first defined in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o'
+nvlink error   : Multiple definition of '_Z8calForceP14_cuAtomElement20_hipDeviceNeiOffsetsd' in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o', first defined in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o'
+nvlink error   : Multiple definition of '_Z8calc_rhoP14_cuAtomElementPd20_hipDeviceNeiOffsetslld' in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o', first defined in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o'
+nvlink fatal   : Internal error: duplicate relocations at same address
+```
+这是因为在链接阶段，cmake 生成的命令会让 nvlink 链接 libmd_arch_hip.a 库两次，
+类似于 "hipcc -std=c++11 -lc++ CMakeFiles/misamd.dir/main.cpp.o -o ../bin/misamd  ../src/arch_hip/lib/libmd_arch_hip.a ../lib/libmd.a ../src/arch_hip/lib/libmd_arch_hip.a ..."
+这种情况在其他的编译器(gcc/clang)是可以正常当成一个库来处理的，但在 nvlink 中不行，会被当成两个库。
+相关讨论参见：https://forums.developer.nvidia.com/t/nvlink-error-multiple-definition-errors-when-linking-to-the-same-library-twice/62892。
+
+不过，似乎可以写一个 wrapper 脚本，来将命令中重复引入的静态库进行去重。
+例如，可以编写的脚本（如 `hipcc-wrapper.sh`，具体可见源码的 `script` 目录），在 CMake 的配置阶段，指定该脚本为链接器。
+
