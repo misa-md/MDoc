@@ -70,11 +70,15 @@ import TabItem from '@theme/TabItem';
 
 ```bash
 # in MISA-MD directory
-export CXX=hipcc
-cmake -B./cmake-build-hip -S./ \
-    -DMD_HIP_ARCH_ENABLE_FLAG=ON \
-    -DMD_HIP_ARCH_SRC_PATH=../misa-md-hip \
-    -DHIP_HIPCC_FLAGS="-std=c++11 -fgpu-rdc"
+export CC=clang
+export CXX=clang++
+cmake -B./cmake-build-hip -S./  \
+   -DCMAKE_BUILD_TYPE=Release \
+   -DMD_HIP_ARCH_ENABLE_FLAG=ON  \
+   -DMD_HIP_ARCH_SRC_PATH=../misa-md-hip \
+   -DHIP_HIPCC_FLAGS="-std=c++11 -fgpu-rdc" \
+   -DCMAKE_LINKER=../misa-md-hip/scripts/hipcc-wrapper.sh \
+   -DCMAKE_CXX_LINK_EXECUTABLE="<CMAKE_LINKER> <FLAGS> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>"
 cmake --build ./cmake-build-hip/ -j 4
 ```
 
@@ -83,13 +87,17 @@ cmake --build ./cmake-build-hip/ -j 4
 
 ```bash
 # in MISA-MD directory
-export CXX=hipcc
-cmake -B./cmake-build-hip -S./  \
-    -DMD_HIP_ARCH_ENABLE_FLAG=ON \
-    -DMD_HIP_ARCH_SRC_PATH=../misa-md-hip \
-    -DHIP_HIPCC_FLAGS=-std=c++11 \
-    -DHIP_NVCC_FLAGS="-arch=sm_35 -rdc=true" \
-    -DCMAKE_CXX_FLAGS="-fPIC -std=c++11 -stdlib=libstdc++ -lcudart"
+export CC=clang
+export CXX=clang++
+cmake -B./cmake-build-hip/ -S./ \
+   -DCMAKE_BUILD_TYPE=Release \
+   -DMD_HIP_ARCH_ENABLE_FLAG=ON \
+   -DMD_HIP_ARCH_SRC_PATH=../misa-md-hip \
+   -DHIP_HIPCC_FLAGS="-std=c++11" \
+   -DHIP_NVCC_FLAGS="-arch=sm_35 -rdc=true" \
+   -DCMAKE_CXX_FLAGS="-std=c++11" \
+   -DCMAKE_LINKER="../misa-md-hip/scripts/hipcc-wrapper.sh" \
+   -DCMAKE_CXX_LINK_EXECUTABLE="<CMAKE_LINKER> <FLAGS> <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>"
 cmake --build ./cmake-build-hip/ -j 4
 ```
 
@@ -218,7 +226,7 @@ nvlink error   : Multiple definition of '_Z8calForceP14_cuAtomElement20_hipDevic
 nvlink error   : Multiple definition of '_Z8calc_rhoP14_cuAtomElementPd20_hipDeviceNeiOffsetslld' in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o', first defined in '../src/arch_hip/lib/libmd_arch_hip.a:md_arch_hip_generated_hip_kernels.hip.cpp.o'
 nvlink fatal   : Internal error: duplicate relocations at same address
 ```
-这是因为在链接阶段，cmake 生成的命令会让 nvlink 链接 libmd_arch_hip.a 库两次，
+这是因为在链接阶段，如果用 hipcc 作为链接器，cmake 生成的命令会让 nvlink 链接 libmd_arch_hip.a 库两次（hipcc 会调用 nvlink），
 类似于 "hipcc -std=c++11 -lc++ CMakeFiles/misamd.dir/main.cpp.o -o ../bin/misamd  ../src/arch_hip/lib/libmd_arch_hip.a ../lib/libmd.a ../src/arch_hip/lib/libmd_arch_hip.a ..."
 这种情况在其他的编译器(gcc/clang)是可以正常当成一个库来处理的，但在 nvlink 中不行，会被当成两个库。
 相关讨论参见：https://forums.developer.nvidia.com/t/nvlink-error-multiple-definition-errors-when-linking-to-the-same-library-twice/62892。
