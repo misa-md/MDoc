@@ -22,7 +22,8 @@ module.exports = {
       "prepare-environment",
       "get-source-code",
       "compiling",
-      "compiling-with-hip"
+      "compiling-with-hip",
+      "compiling-with-sunway"
     ],
     "运行 MD": [
       "potential-file",
