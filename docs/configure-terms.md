@@ -52,20 +52,20 @@ sidebar_label: "配置项说明"
 类型：Integer;  
 说明：创建原子时，随机生成不同种类合金原子的随机数种子;  
 
-### creation.alloy.ratio
-说明：创建原子时，指定随机生成的各类合金原子比例，例如各类合金的比例Fe:Cu:Ni = 97:2:1;
+### creation.alloy.types
+说明：合金元素的相关类型配置，可以指定模拟体系中合金的相关名称、相对原子质量及比例;  
 
-### creation.alloy.ratio.Fe
-类型：Integer;  
-说明：创建合金时，合金中Fe元素的比例;  
+### creation.alloy.types.name
+类型：String;  
+说明：合金名称，用户自定义字符串，一般可以用化学式符号;  
 
-### creation.alloy.ratio.Cu
-类型：Integer;  
-说明：创建合金时，合金中Cu元素的比例;  
+### creation.alloy.types.mass
+类型：Float;  
+说明：合金对应元素的相对原子质量;  
 
-### creation.alloy.ratio.Ni
+### creation.alloy.types.weight
 类型：Integer;  
-说明：创建合金时，合金中Ni元素的比例;  
+说明：合金中该元素的权重，用于指定在创建体系时，随机生成的各类合金原子的比例;  
 
 ### potential
 说明：势函数文件相关参数;  

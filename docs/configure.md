@@ -37,10 +37,16 @@ creation:
   create_t_set: 600
   alloy:
     create_seed: 1024
-    ratio:
-      Fe: 97
-      Cu: 2
-      Ni: 1
+    types:
+      - name: Fe
+        mass: 55.845
+        weight: 97
+      - name: Cu
+        mass: 63.546
+        weight: 2
+      - name: Ni
+        mass: 58.6934
+        weight: 1
 
 output:
   atom_dump:
