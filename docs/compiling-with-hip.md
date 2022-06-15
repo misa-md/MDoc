@@ -148,7 +148,15 @@ git.hpcer.dev/HPCer/MISA-MD/hip-potential@v0.1.0@hip_pot:
   以上 issue 主要是说，链接的时候需要为链接器设置 "-hip-link -fgpu-rdc" 选项。  
   此外，如果系统环境中没有 python3，也有可能会出现该错误，请确保设置好了 python3 环境。
 
-5. 运行错误
+5. 链接错误
+   ```log
+   ar: no operation specified
+   clang-12: error: no such file or directory: '/tmp/hipccLygVdIDW/libmd_arch_hip.aw9rT'
+   make[2]: *** [frontend/CMakeFiles/misamd.dir/build.make:114: bin/misamd] Error 1
+   ```
+   https://github.com/ROCm-Developer-Tools/HIP/issues/2295
+
+6. 运行错误
    ```log
    rocm-rel-3.9/rocm-3.9-19-20201111/7.7/external/hip-on-vdi/rocclr/hip_global.cpp:69: guarantee(false && "Cannot find Symbol")
    [e05r3n17:27486] *** Process received signal ***
