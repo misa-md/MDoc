@@ -1,16 +1,16 @@
 {
-  "version-0.2.0/docs": [
+  "docs": [
     {
       "type": "category",
       "label": "概览",
       "items": [
         {
           "type": "doc",
-          "id": "version-0.2.0/overview"
+          "id": "overview"
         },
         {
           "type": "doc",
-          "id": "version-0.2.0/publications"
+          "id": "publications"
         }
       ]
     },
@@ -20,7 +20,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.2.0/getting-started"
+          "id": "getting-started"
         }
       ]
     },
@@ -30,15 +30,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.2.0/prepare-environment"
+          "id": "prepare-environment"
         },
         {
           "type": "doc",
-          "id": "version-0.2.0/get-source-code"
+          "id": "get-source-code"
         },
         {
           "type": "doc",
-          "id": "version-0.2.0/compiling"
+          "id": "compiling"
         }
       ]
     },
@@ -48,11 +48,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.2.0/potential-file"
+          "id": "potential-file"
         },
         {
           "type": "doc",
-          "id": "version-0.2.0/run-md"
+          "id": "run-md"
         }
       ]
     },
@@ -62,11 +62,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.2.0/configure"
+          "id": "configure"
         },
         {
           "type": "doc",
-          "id": "version-0.2.0/configure-terms"
+          "id": "configure-terms"
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "version-0.4.0/docs": [
+  "docs": [
     {
       "collapsed": true,
       "type": "category",
@@ -7,11 +7,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/overview"
+          "id": "overview"
         },
         {
           "type": "doc",
-          "id": "version-0.4.0/publications"
+          "id": "publications"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/getting-started"
+          "id": "getting-started"
         }
       ]
     },
@@ -33,15 +33,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/prepare-environment"
+          "id": "prepare-environment"
         },
         {
           "type": "doc",
-          "id": "version-0.4.0/get-source-code"
+          "id": "get-source-code"
         },
         {
           "type": "doc",
-          "id": "version-0.4.0/compiling"
+          "id": "compiling"
         }
       ]
     },
@@ -52,11 +52,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/potential-file"
+          "id": "potential-file"
         },
         {
           "type": "doc",
-          "id": "version-0.4.0/run-md"
+          "id": "run-md"
         }
       ]
     },
@@ -67,11 +67,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/configure"
+          "id": "configure"
         },
         {
           "type": "doc",
-          "id": "version-0.4.0/configure-terms"
+          "id": "configure-terms"
         }
       ]
     },
@@ -82,7 +82,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-0.4.0/md-tools"
+          "id": "md-tools"
         }
       ]
     }

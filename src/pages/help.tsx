@@ -1,7 +1,8 @@
-import React from "react";
-import Layout from "@theme/Layout";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./styles.module.css";
+import type {ReactNode} from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+
+import styles from './index.module.css';
 
 function Help() {
   const { siteConfig = {} } = useDocusaurusContext();

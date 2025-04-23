@@ -1,9 +1,9 @@
-import React from "react";
+import type {ReactNode} from 'react';
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./styles.module.css";
+import styles from "./index.module.css";
 
 function Users() {
   const { siteConfig = {} } = useDocusaurusContext();
