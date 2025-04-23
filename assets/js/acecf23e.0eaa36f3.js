@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmdoc=self.webpackChunkmdoc||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/MDoc/blog","blogTitle":"Blog","authorsListPath":"/MDoc/blog/authors"}')}}]);

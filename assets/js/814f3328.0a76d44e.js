@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmdoc=self.webpackChunkmdoc||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"MISA-MD v0.4.0 release","permalink":"/MDoc/blog/2020/09/12/md-v0.4.0-release","unlisted":false,"date":"2020-09-12T00:00:00.000Z"}]}')}}]);

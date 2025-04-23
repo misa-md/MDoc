@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmdoc=self.webpackChunkmdoc||[]).push([[2015],{4971:e=>{e.exports=JSON.parse('{"tags":[{"label":"release","permalink":"/MDoc/blog/tags/release","count":1}]}')}}]);
