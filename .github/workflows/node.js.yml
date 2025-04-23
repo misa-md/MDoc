@@ -42,7 +42,7 @@ jobs:
           CI: true
           DOC_DEPLOY_PATH: "/MDoc/"
           DOC_GIT_REPO: "https://github.com/misa-md/MDoc"
-          DOC_SITE_URL: "https://misa-md.github.io/MDoc"
+          DOC_SITE_URL: "https://misa-md.github.io"
           SOURCE_GIT_REPO: "https://github.com/misa-md/MISA-MD"
 
       - name: Deploy

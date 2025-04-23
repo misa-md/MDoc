@@ -38,4 +38,4 @@ $ build/bin/CrystalMD --help
 ## 2.运行结果
 
 运行结束后，example目录下会生成 atom dump 文件，按照每个进程输出。
-文件名为 `dump_{rank id}.atom`，其中{rank id}为进程的rank id。
+文件名为 `dump_{rank id}.atom`，其中`{rank id}`为进程的rank id。
