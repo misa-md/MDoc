@@ -34,6 +34,9 @@ module.exports = {
       "model-cascade-collision",
       "configure-terms"
     ],
+    "力场与势函数": [
+      "mtp-potential",
+    ],
     "工具": [
       "md-tools"
     ]
