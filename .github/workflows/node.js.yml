@@ -3,9 +3,10 @@
 
 name: Node.js CI
 
-on:
-  push:
-    branches: [ master ]
+on: [push]
+# on:
+#   push:
+#     branches: [ master ]
 #   pull_request:
 #     branches: [ master ]
 
@@ -47,6 +48,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/master'
         with:
           publish_branch: gh-pages
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
